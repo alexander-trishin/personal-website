@@ -37,7 +37,8 @@ const configuration = {
 
     setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
 
-    testEnvironment: 'jsdom'
+    testEnvironment: 'jsdom',
+    testResultsProcessor: 'jest-sonar-reporter'
 };
 
 export default configuration;
