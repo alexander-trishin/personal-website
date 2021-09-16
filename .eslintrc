@@ -1,0 +1,96 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/typescript",
+        "plugin:jest/recommended",
+        "plugin:prettier/recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2021,
+        "sourceType": "module"
+    },
+    "plugins": ["import", "jest", "react", "react-hooks", "@typescript-eslint"],
+    "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "error",
+        "jest/valid-expect": "error",
+        "import/no-duplicates": "error",
+        "import/no-unresolved": "error",
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    ["internal", "unknown"],
+                    ["parent", "sibling", "index"],
+                    "object"
+                ],
+                "pathGroups": [
+                    {
+                        "pattern": "react",
+                        "group": "external",
+                        "position": "before"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": ["builtin", "react"],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ],
+        "linebreak-style": 0,
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": ["const", "let"], "next": "*" },
+            {
+                "blankLine": "any",
+                "prev": ["const", "let"],
+                "next": ["const", "let"]
+            }
+        ],
+        "prefer-destructuring": ["error", { "array": true, "object": true }],
+        "react/display-name": "off",
+        "react/jsx-handler-names": [
+            "error",
+            {
+                "eventHandlerPrefix": "handle",
+                "eventHandlerPropPrefix": "on"
+            }
+        ],
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "sort-imports": ["error", { "ignoreDeclarationSort": true }],
+        "no-console": "error",
+        "no-redeclare": ["error", { "builtinGlobals": true }]
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true,
+                "project": "tsconfig.json"
+            }
+        },
+        "react": {
+            "version": "detect"
+        }
+    }
+}

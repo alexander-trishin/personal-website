@@ -1,0 +1,29 @@
+name: Run Tests
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+env:
+  NODE_VERSION: "14.x"
+
+jobs:
+  setup-and-run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Setup Yarn
+        run: npm install yarn -g
+      - name: Restore packages
+        run: yarn
+      - name: Run linter
+        run: yarn lint
+      - name: Run tests
+        run: yarn test --coverage

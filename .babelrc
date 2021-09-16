@@ -1,0 +1,31 @@
+{
+    "presets": [
+        ["@babel/preset-env", { "useBuiltIns": "entry", "corejs": "3.17" }],
+        ["@babel/preset-react", { "runtime": "automatic" }],
+        "@babel/preset-typescript"
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "absoluteRuntime": false,
+                "corejs": false,
+                "helpers": true,
+                "regenerator": true
+            }
+        ],
+        [
+            "babel-plugin-named-asset-import",
+            {
+                "loaderMap": {
+                    "svg": {
+                        "Svg": "@svgr/webpack?-svgo,+titleProp,+ref![path]"
+                    }
+                }
+            }
+        ],
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-private-methods",
+        "@babel/plugin-syntax-dynamic-import"
+    ]
+}

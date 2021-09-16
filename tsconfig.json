@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./source",
+        "paths": {
+            "app/*": ["app/*"],
+            "assets/*": ["assets/*"],
+            "common/*": ["common/*"],
+            "components/*": ["components/*"],
+            "containers/*": ["containers/*"],
+            "elements/*": ["elements/*"],
+            "modules/*": ["modules/*"],
+            "pages/*": ["pages/*"],
+            "utils/*": ["utils/*"]
+        },
+        "target": "es6",
+        "lib": ["dom", "es6"],
+        "jsx": "preserve",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "strict": true
+    },
+    "include": ["./source"],
+    "ts-node": {
+        "compilerOptions": {
+            "baseUrl": ".",
+            "paths": {
+                "interpolate-html-plugin": ["typings/interpolate-html-plugin"]
+            },
+            "module": "none"
+        }
+    }
+}
