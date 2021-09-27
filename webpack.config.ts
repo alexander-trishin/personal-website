@@ -35,14 +35,6 @@ const createWebpackConfiguration = (): Configuration => {
                 {
                     oneOf: [
                         {
-                            test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-                            loader: 'url-loader',
-                            options: {
-                                limit: 10000,
-                                name: 'static/media/[name].[hash:8].[ext]'
-                            }
-                        },
-                        {
                             test: /\.tsx?$/,
                             include: paths.source,
                             loader: 'babel-loader',
@@ -99,10 +91,12 @@ const createWebpackConfiguration = (): Configuration => {
                             ]
                         },
                         {
-                            loader: 'file-loader',
-                            exclude: [/\.(ts|tsx)$/, /\.html$/, /\.json$/],
-                            options: {
-                                name: 'static/media/[name].[hash:8].[ext]'
+                            exclude: [/\.(tsx?)$/, /\.html$/, /\.json$/],
+                            type: 'asset',
+                            parser: {
+                                dataUrlCondition: {
+                                    maxSize: 1024
+                                }
                             }
                         }
                     ]
@@ -194,6 +188,7 @@ const createWebpackConfiguration = (): Configuration => {
             publicPath: paths.publicUrlOrPath,
             path: paths.build,
             pathinfo: !isProduction,
+            assetModuleFilename: 'static/media/[name].[hash:8].[ext][query]',
             filename: isProduction
                 ? 'static/js/[name].[contenthash:8].js'
                 : 'static/js/[name].bundle.js',
