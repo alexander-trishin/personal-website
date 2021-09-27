@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Typography /> should use style of body 1`] = `
+<Typography
+  variant="body"
+>
+  body
+</Typography>
+`;
+
+exports[`<Typography /> should use style of h1 1`] = `
+<Typography
+  variant="h1"
+>
+  h1
+</Typography>
+`;
+
+exports[`<Typography /> should use style of h2 1`] = `
+<Typography
+  variant="h2"
+>
+  h2
+</Typography>
+`;
+
+exports[`<Typography /> should use style of h3 1`] = `
+<Typography
+  variant="h3"
+>
+  h3
+</Typography>
+`;
+
+exports[`<Typography /> should use style of h4 1`] = `
+<Typography
+  variant="h4"
+>
+  h4
+</Typography>
+`;
+
+exports[`<Typography /> should use style of h5 1`] = `
+<Typography
+  variant="h5"
+>
+  h5
+</Typography>
+`;
+
+exports[`<Typography /> should use style of h6 1`] = `
+<Typography
+  variant="h6"
+>
+  h6
+</Typography>
+`;
+
+exports[`<Typography /> should use style of subtitle 1`] = `
+<Typography
+  variant="subtitle"
+>
+  subtitle
+</Typography>
+`;
