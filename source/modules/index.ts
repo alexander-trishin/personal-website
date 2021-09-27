@@ -1,0 +1,1 @@
+export { PersonalModule } from './personal';
