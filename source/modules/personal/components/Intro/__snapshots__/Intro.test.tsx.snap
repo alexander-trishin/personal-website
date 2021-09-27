@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Intro /> should match snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="relative flex justify-center items-center min-h-lg h-full w-full"
+        id="intro"
+        style="background: rgb(21, 21, 21) url(test-file-stub) no-repeat bottom; background-size: cover; background-attachment: fixed;"
+      >
+        <div
+          class="absolute left-0 top-0 h-full w-full bg-gray-900 opacity-80"
+        />
+        <div
+          class="text-center z-10"
+        >
+          <div
+            class="mx-auto max-w-6xl"
+          >
+            <div
+              class="text-white px-4"
+            >
+              <h5
+                class="text-2xl text-primary uppercase"
+              >
+                Hello, World.
+              </h5>
+              <h1
+                class="text-7xl max-w-5xl mb-2 mx-auto"
+              >
+                I'm Alexander Trishin.
+              </h1>
+              <p
+                class="uppercase mb-8"
+              >
+                Full-Stack Developer
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          data-testid="social"
+        />
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="relative flex justify-center items-center min-h-lg h-full w-full"
+      id="intro"
+      style="background: rgb(21, 21, 21) url(test-file-stub) no-repeat bottom; background-size: cover; background-attachment: fixed;"
+    >
+      <div
+        class="absolute left-0 top-0 h-full w-full bg-gray-900 opacity-80"
+      />
+      <div
+        class="text-center z-10"
+      >
+        <div
+          class="mx-auto max-w-6xl"
+        >
+          <div
+            class="text-white px-4"
+          >
+            <h5
+              class="text-2xl text-primary uppercase"
+            >
+              Hello, World.
+            </h5>
+            <h1
+              class="text-7xl max-w-5xl mb-2 mx-auto"
+            >
+              I'm Alexander Trishin.
+            </h1>
+            <p
+              class="uppercase mb-8"
+            >
+              Full-Stack Developer
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="social"
+      />
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
