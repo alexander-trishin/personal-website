@@ -7,11 +7,18 @@ import { DefinePlugin, EntryObject, Configuration as WebpackConfiguration } from
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 import { WebpackManifestPlugin as ManifestWebpackPlugin } from 'webpack-manifest-plugin';
 
-import { getClientEnvironment, getWebpackResolveAlias, paths } from './config';
+import {
+    getClientEnvironment,
+    getWebpackResolveAlias,
+    importEnvironmentVariables,
+    paths
+} from './config';
 
 interface Configuration extends WebpackConfiguration {
     devServer?: WebpackDevServerConfiguration;
 }
+
+importEnvironmentVariables();
 
 const createWebpackConfiguration = (): Configuration => {
     const clientEnvironment = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));

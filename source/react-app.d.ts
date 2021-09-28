@@ -1,6 +1,11 @@
 declare namespace NodeJS {
+    import { EnvironmentMode } from 'common/constants';
+
     interface ProcessEnv {
+        readonly NODE_ENV: EnvironmentMode;
         readonly PUBLIC_URL: string;
+        readonly REACT_APP_ANALYTICS_ID: string;
+        readonly REACT_APP_ANALYTICS_URI: string;
     }
 }
 
@@ -35,6 +40,7 @@ declare module '*.webp' {
 }
 
 declare module '*.svg' {
+    // eslint-disable-next-line import/order
     import type { FC, SVGProps } from 'react';
 
     export const ReactComponent: FC<SVGProps<SVGSVGElement> & { title?: string }>;

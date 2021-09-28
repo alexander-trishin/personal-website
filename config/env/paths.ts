@@ -29,6 +29,7 @@ const paths = {
     indexHtml: resolvePath('public/index.html'),
     source: resolvePath('source'),
     indexTsx: resolvePath('source/index.tsx'),
+    dotenv: resolvePath('.env'),
     tsconfig: resolvePath('tsconfig.json'),
     publicUrlOrPath: getPublicUrlOrPath(
         process.env.NODE_ENV !== 'production',
