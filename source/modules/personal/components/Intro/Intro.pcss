@@ -1,0 +1,33 @@
+#intro h1 {
+    font-size: clamp(42px, calc(2.625rem + (84 - 42) * ((100vw - 480px) / (920 - 480))), 84px);
+    line-height: 1.071;
+    letter-spacing: -1px;
+}
+
+@media only screen and (max-width: 600px) {
+    #intro h1 {
+        letter-spacing: -0.07rem;
+    }
+}
+
+#intro h5 {
+    font-size: clamp(15px, calc(0.9375rem + (23 - 15) * ((100vw - 480px) / (920 - 480))), 23px);
+    line-height: 1.565;
+    letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+    #intro h2 {
+        letter-spacing: 2px;
+    }
+}
+
+#intro .position {
+    font-size: clamp(12px, calc(0.75rem + (17 - 12) * ((100vw - 480px) / (920 - 480))), 17px);
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+
+#intro .social {
+    font-size: clamp(24px, calc(1.5rem + (33 - 24) * ((100vw - 480px) / (920 - 480))), 33px);
+}

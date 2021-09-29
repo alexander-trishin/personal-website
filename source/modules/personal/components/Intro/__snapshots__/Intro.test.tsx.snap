@@ -23,17 +23,17 @@ Object {
               class="text-white px-4"
             >
               <h5
-                class="text-2xl text-primary uppercase"
+                class="font-bold text-primary uppercase"
               >
                 Hello, World.
               </h5>
               <h1
-                class="text-7xl max-w-5xl mb-2 mx-auto"
+                class="font-semibold max-w-5xl mb-2 mx-auto"
               >
                 I'm Alexander Trishin.
               </h1>
               <p
-                class="uppercase mb-8"
+                class="position uppercase mb-8"
               >
                 Full-Stack Developer
               </p>
@@ -65,17 +65,17 @@ Object {
             class="text-white px-4"
           >
             <h5
-              class="text-2xl text-primary uppercase"
+              class="font-bold text-primary uppercase"
             >
               Hello, World.
             </h5>
             <h1
-              class="text-7xl max-w-5xl mb-2 mx-auto"
+              class="font-semibold max-w-5xl mb-2 mx-auto"
             >
               I'm Alexander Trishin.
             </h1>
             <p
-              class="uppercase mb-8"
+              class="position uppercase mb-8"
             >
               Full-Stack Developer
             </p>
