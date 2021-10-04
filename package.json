@@ -14,11 +14,12 @@
     "scripts": {
         "prepare": "husky install",
         "postbuild": "react-snap",
+        "analyze": "source-map-explorer 'build/static/js/*.js'",
         "clear": "rimraf build coverage node_modules",
         "build": "cross-env NODE_ENV=production webpack",
         "start": "cross-env NODE_ENV=development webpack serve",
         "serve": "serve build --single",
-        "lint": "tsc && eslint \"source/**\" --config \".eslintrc\"",
+        "lint": "tsc && eslint 'source/**' --config '.eslintrc'",
         "test": "cross-env NODE_ENV=test jest"
     },
     "dependencies": {
@@ -29,7 +30,7 @@
         "@fortawesome/free-solid-svg-icons": "5.15.4",
         "@fortawesome/react-fontawesome": "0.1.15",
         "clsx": "1.1.1",
-        "core-js": "3.17.3",
+        "core-js": "3.18.1",
         "lodash": "4.17.21",
         "react": "17.0.2",
         "react-dom": "17.0.2",
@@ -110,6 +111,7 @@
         "react-test-renderer": "17.0.2",
         "rimraf": "3.0.2",
         "serve": "12.0.1",
+        "source-map-explorer": "2.5.2",
         "style-loader": "3.2.1",
         "tailwindcss": "2.2.15",
         "ts-node": "10.2.1",
