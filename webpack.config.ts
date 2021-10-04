@@ -2,6 +2,7 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import InterpolateHtmlWebpackPlugin from 'interpolate-html-plugin';
+import LodashWebpackPlugin from 'lodash-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { DefinePlugin, EntryObject, Configuration as WebpackConfiguration } from 'webpack';
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
@@ -111,6 +112,7 @@ const createWebpackConfiguration = (): Configuration => {
             ]
         },
         plugins: [
+            new LodashWebpackPlugin(),
             new HtmlWebpackPlugin({
                 inject: true,
                 template: paths.indexHtml,
