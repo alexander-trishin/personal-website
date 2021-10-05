@@ -5,14 +5,10 @@ const configuration = {
     clearMocks: true,
 
     collectCoverageFrom: [
-        '**/source/**/*.{ts,tsx}',
-        '!**/node_modules/**',
+        'source/**/*.{ts,tsx}',
+        '!source/index.tsx',
         '!**/styles/**',
-        '!**/coverage/**',
-        '!**/source/index.tsx',
-        '!**/*.stories.tsx',
-
-        '!**/Home.tsx'
+        '!**/*.stories.tsx'
     ],
 
     coverageDirectory: 'coverage',
