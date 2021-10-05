@@ -10,10 +10,11 @@ Object {
           class="inline-block mx-3"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://www.linkedin.com/in/trishinalexander"
             rel="noopener noreferrer"
             target="_blank"
+            title="LinkedIn"
           >
             <svg
               aria-hidden="true"
@@ -36,10 +37,11 @@ Object {
           class="inline-block mx-3"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://github.com/alexander-trishin"
             rel="noopener noreferrer"
             target="_blank"
+            title="GitHub"
           >
             <svg
               aria-hidden="true"
@@ -62,10 +64,11 @@ Object {
           class="inline-block mx-3"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://www.instagram.com/effecto.exe"
             rel="noopener noreferrer"
             target="_blank"
+            title="Instagram"
           >
             <svg
               aria-hidden="true"
@@ -92,10 +95,11 @@ Object {
           class="inline-block mx-5"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://www.linkedin.com/in/trishinalexander"
             rel="noopener noreferrer"
             target="_blank"
+            title="LinkedIn"
           >
             <svg
               aria-hidden="true"
@@ -118,10 +122,11 @@ Object {
           class="inline-block mx-5"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://github.com/alexander-trishin"
             rel="noopener noreferrer"
             target="_blank"
+            title="GitHub"
           >
             <svg
               aria-hidden="true"
@@ -144,10 +149,11 @@ Object {
           class="inline-block mx-5"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://www.instagram.com/effecto.exe"
             rel="noopener noreferrer"
             target="_blank"
+            title="Instagram"
           >
             <svg
               aria-hidden="true"
@@ -175,10 +181,11 @@ Object {
         class="inline-block mx-5"
       >
         <a
-          class="button button-text"
+          class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
           href="https://www.linkedin.com/in/trishinalexander"
           rel="noopener noreferrer"
           target="_blank"
+          title="LinkedIn"
         >
           <svg
             aria-hidden="true"
@@ -201,10 +208,11 @@ Object {
         class="inline-block mx-5"
       >
         <a
-          class="button button-text"
+          class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
           href="https://github.com/alexander-trishin"
           rel="noopener noreferrer"
           target="_blank"
+          title="GitHub"
         >
           <svg
             aria-hidden="true"
@@ -227,10 +235,11 @@ Object {
         class="inline-block mx-5"
       >
         <a
-          class="button button-text"
+          class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
           href="https://www.instagram.com/effecto.exe"
           rel="noopener noreferrer"
           target="_blank"
+          title="Instagram"
         >
           <svg
             aria-hidden="true"
@@ -315,10 +324,11 @@ Object {
           class="inline-block mx-3"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://www.linkedin.com/in/trishinalexander"
             rel="noopener noreferrer"
             target="_blank"
+            title="LinkedIn"
           >
             <svg
               aria-hidden="true"
@@ -341,10 +351,11 @@ Object {
           class="inline-block mx-3"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://github.com/alexander-trishin"
             rel="noopener noreferrer"
             target="_blank"
+            title="GitHub"
           >
             <svg
               aria-hidden="true"
@@ -367,10 +378,11 @@ Object {
           class="inline-block mx-3"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://www.instagram.com/effecto.exe"
             rel="noopener noreferrer"
             target="_blank"
+            title="Instagram"
           >
             <svg
               aria-hidden="true"
@@ -397,10 +409,11 @@ Object {
           class="inline-block mx-5"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://www.linkedin.com/in/trishinalexander"
             rel="noopener noreferrer"
             target="_blank"
+            title="LinkedIn"
           >
             <svg
               aria-hidden="true"
@@ -423,10 +436,11 @@ Object {
           class="inline-block mx-5"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://github.com/alexander-trishin"
             rel="noopener noreferrer"
             target="_blank"
+            title="GitHub"
           >
             <svg
               aria-hidden="true"
@@ -449,10 +463,11 @@ Object {
           class="inline-block mx-5"
         >
           <a
-            class="button button-text"
+            class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
             href="https://www.instagram.com/effecto.exe"
             rel="noopener noreferrer"
             target="_blank"
+            title="Instagram"
           >
             <svg
               aria-hidden="true"
@@ -480,10 +495,11 @@ Object {
         class="inline-block mx-3"
       >
         <a
-          class="button button-text"
+          class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
           href="https://www.linkedin.com/in/trishinalexander"
           rel="noopener noreferrer"
           target="_blank"
+          title="LinkedIn"
         >
           <svg
             aria-hidden="true"
@@ -506,10 +522,11 @@ Object {
         class="inline-block mx-3"
       >
         <a
-          class="button button-text"
+          class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
           href="https://github.com/alexander-trishin"
           rel="noopener noreferrer"
           target="_blank"
+          title="GitHub"
         >
           <svg
             aria-hidden="true"
@@ -532,10 +549,11 @@ Object {
         class="inline-block mx-3"
       >
         <a
-          class="button button-text"
+          class="inline-block transition-all duration-300 text-center focus:text-primary hover:text-primary"
           href="https://www.instagram.com/effecto.exe"
           rel="noopener noreferrer"
           target="_blank"
+          title="Instagram"
         >
           <svg
             aria-hidden="true"

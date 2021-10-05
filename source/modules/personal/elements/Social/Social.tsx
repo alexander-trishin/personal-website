@@ -7,9 +7,13 @@ import clsx from 'clsx';
 import { Button } from 'elements';
 
 const links = [
-    { icon: faLinkedinIn, address: 'https://www.linkedin.com/in/trishinalexander' },
-    { icon: faGithub, address: 'https://github.com/alexander-trishin' },
-    { icon: faInstagram, address: 'https://www.instagram.com/effecto.exe' }
+    {
+        title: 'LinkedIn',
+        icon: faLinkedinIn,
+        address: 'https://www.linkedin.com/in/trishinalexander'
+    },
+    { title: 'GitHub', icon: faGithub, address: 'https://github.com/alexander-trishin' },
+    { title: 'Instagram', icon: faInstagram, address: 'https://www.instagram.com/effecto.exe' }
 ];
 
 interface SocialProps extends HTMLAttributes<HTMLUListElement> {
@@ -21,7 +25,7 @@ const Social: FC<SocialProps> = props => {
 
     return (
         <ul {...rest}>
-            {links.map(({ icon, address }, index) => (
+            {links.map(({ title, icon, address }, index) => (
                 <li
                     key={index}
                     className={clsx('inline-block', {
@@ -29,7 +33,7 @@ const Social: FC<SocialProps> = props => {
                         'mx-5': size === 'large'
                     })}
                 >
-                    <Button to={address}>
+                    <Button to={address} title={title}>
                         <FontAwesomeIcon icon={icon} />
                     </Button>
                 </li>
