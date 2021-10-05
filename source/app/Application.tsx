@@ -1,25 +1,22 @@
-import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 
 import { Environment, EnvironmentMode } from 'common/constants';
+import { Analytics } from 'containers';
 import { PersonalModule } from 'modules';
 
 import 'assets/styles/index.pcss';
 
 const Application = () => {
+    const {
+        Analytics: { Uri, Id },
+        Mode,
+        PublicUrl
+    } = Environment;
+
     return (
         <>
-            {Environment.Mode === EnvironmentMode.Production && (
-                <Helmet>
-                    <script
-                        async
-                        defer
-                        data-website-id={Environment.Analytics.Id}
-                        src={Environment.Analytics.Uri}
-                    ></script>
-                </Helmet>
-            )}
-            <BrowserRouter basename={Environment.PublicUrl}>
+            {Mode === EnvironmentMode.Production && <Analytics uri={Uri} id={Id} />}
+            <BrowserRouter basename={PublicUrl}>
                 <PersonalModule />
             </BrowserRouter>
         </>

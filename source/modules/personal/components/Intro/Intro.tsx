@@ -1,11 +1,19 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, HTMLAttributes, MouseEventHandler, forwardRef } from 'react';
 
-import { Typography } from 'elements';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import clsx from 'clsx';
+
+import { Button, Typography } from 'elements';
 import { Social } from 'modules/personal/elements';
 
 import BackgroundUrl from '../../assets/images/intro-bg.jpg';
 
 import './Intro.pcss';
+
+interface IntroProps extends HTMLAttributes<HTMLElement> {
+    onShowMore?: MouseEventHandler<HTMLElement>;
+}
 
 const styles: Record<string, CSSProperties> = {
     root: {
@@ -15,12 +23,18 @@ const styles: Record<string, CSSProperties> = {
     }
 };
 
-const Intro = () => {
+const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
+    const { className, onShowMore, style = {}, ...rest } = props;
+
     return (
         <section
-            id="intro"
-            className="relative flex justify-center items-center min-h-lg h-full w-full"
-            style={styles.root}
+            {...rest}
+            ref={ref}
+            className={clsx(
+                'relative flex justify-center items-center min-h-lg h-full w-full',
+                className
+            )}
+            style={{ ...styles.root, ...style }}
         >
             <div className="absolute left-0 top-0 h-full w-full bg-gray-900 opacity-80"></div>
 
@@ -31,13 +45,21 @@ const Intro = () => {
                             Hello, World.
                         </Typography>
 
-                        <Typography className="font-semibold max-w-5xl mb-2 mx-auto" variant="h1">
+                        <Typography
+                            className="text-9xl-fluid font-semibold max-w-5xl mb-2 mx-auto"
+                            variant="h1"
+                        >
                             I&apos;m Alexander Trishin.
                         </Typography>
 
                         <Typography className="position uppercase mb-8">
                             Full-Stack Developer
                         </Typography>
+
+                        <Button to="#about" variant="outlined" onClick={onShowMore}>
+                            More about me
+                            <FontAwesomeIcon className="ml-2" icon={faChevronDown} size="sm" />
+                        </Button>
                     </div>
                 </div>
             </div>
@@ -48,6 +70,8 @@ const Intro = () => {
             />
         </section>
     );
-};
+});
+
+Intro.displayName = 'Intro';
 
 export default Intro;

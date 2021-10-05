@@ -7,7 +7,6 @@ Object {
     <div>
       <section
         class="relative flex justify-center items-center min-h-lg h-full w-full"
-        id="intro"
         style="background: rgb(21, 21, 21) url(test-file-stub) no-repeat bottom; background-size: cover; background-attachment: fixed;"
       >
         <div
@@ -23,12 +22,12 @@ Object {
               class="text-white px-4"
             >
               <h5
-                class="font-bold text-primary uppercase"
+                class="text-2xl-fluid font-poppins font-bold uppercase font-bold text-primary uppercase"
               >
                 Hello, World.
               </h5>
               <h1
-                class="font-semibold max-w-5xl mb-2 mx-auto"
+                class="text-6xl-fluid font-poppins font-bold normal-case text-9xl-fluid font-semibold max-w-5xl mb-2 mx-auto"
               >
                 I'm Alexander Trishin.
               </h1>
@@ -37,6 +36,28 @@ Object {
               >
                 Full-Stack Developer
               </p>
+              <a
+                class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4"
+                href="/#about"
+                variant="outlined"
+              >
+                More about me
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-chevron-down fa-w-14 fa-sm ml-2"
+                  data-icon="chevron-down"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -49,7 +70,6 @@ Object {
   "container": <div>
     <section
       class="relative flex justify-center items-center min-h-lg h-full w-full"
-      id="intro"
       style="background: rgb(21, 21, 21) url(test-file-stub) no-repeat bottom; background-size: cover; background-attachment: fixed;"
     >
       <div
@@ -65,12 +85,12 @@ Object {
             class="text-white px-4"
           >
             <h5
-              class="font-bold text-primary uppercase"
+              class="text-2xl-fluid font-poppins font-bold uppercase font-bold text-primary uppercase"
             >
               Hello, World.
             </h5>
             <h1
-              class="font-semibold max-w-5xl mb-2 mx-auto"
+              class="text-6xl-fluid font-poppins font-bold normal-case text-9xl-fluid font-semibold max-w-5xl mb-2 mx-auto"
             >
               I'm Alexander Trishin.
             </h1>
@@ -79,6 +99,28 @@ Object {
             >
               Full-Stack Developer
             </p>
+            <a
+              class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4"
+              href="/#about"
+              variant="outlined"
+            >
+              More about me
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-chevron-down fa-w-14 fa-sm ml-2"
+                data-icon="chevron-down"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>

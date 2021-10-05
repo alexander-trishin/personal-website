@@ -8,6 +8,7 @@ export type AsComponent = Heading | 'p' | 'span';
 export type Variant = Heading | 'subtitle' | 'body';
 
 interface BaseProps {
+    classNameOverride?: boolean;
     variant?: Variant;
 }
 

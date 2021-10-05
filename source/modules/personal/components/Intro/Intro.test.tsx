@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 
 import { Intro } from '.';
 
@@ -8,7 +9,7 @@ jest.mock('modules/personal/elements', () => ({
 
 describe('<Intro />', () => {
     it('should match snapshot', () => {
-        const wrapper = render(<Intro />);
+        const wrapper = render(<Intro />, { wrapper: MemoryRouter });
 
         expect(wrapper).toMatchSnapshot();
     });
