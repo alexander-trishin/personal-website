@@ -10,17 +10,18 @@ import {
     isAnchor
 } from './ButtonTypes';
 
-import './Button.pcss';
-
 const Button = forwardRef<PolymorphicButtonElement, PolymorphicButtonProps>((props, ref) => {
     const { className, variant = 'text' } = props;
 
     const mergedClassName = clsx(
-        'button',
+        'inline-block transition-all duration-300 text-center',
         {
-            'button-contained': variant === 'contained',
-            'button-outlined': variant === 'outlined',
-            'button-text': variant === 'text'
+            'font-poppins font-bold text-button uppercase':
+                variant === 'contained' || variant === 'outlined',
+            'px-8 py-4': variant === 'contained',
+            'text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4':
+                variant === 'outlined',
+            'focus:text-primary hover:text-primary': variant === 'text'
         },
         className
     );
