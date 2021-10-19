@@ -48,7 +48,6 @@ const GoTop: FC<GoTopProps> = props => {
             leaveTo="opacity-0"
         >
             <Button
-                to="#intro"
                 onClick={onGoTop}
                 className={clsx(
                     'flex justify-center items-center',

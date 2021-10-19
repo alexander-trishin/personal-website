@@ -56,7 +56,7 @@ const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
                             Full-Stack Developer
                         </Typography>
 
-                        <Button to="#about" variant="outlined" onClick={onShowMore}>
+                        <Button variant="outlined" onClick={onShowMore}>
                             More about me
                             <FontAwesomeIcon className="ml-2" icon={faChevronDown} size="sm" />
                         </Button>

@@ -22,23 +22,22 @@ Object {
               class="text-white px-4"
             >
               <h5
-                class="text-2xl-fluid font-poppins font-bold uppercase font-bold text-primary uppercase"
+                class="min-h-0vw text-2xl-fluid font-poppins font-bold uppercase font-bold text-primary uppercase"
               >
                 Hello, World.
               </h5>
               <h1
-                class="text-6xl-fluid font-poppins font-bold normal-case text-9xl-fluid font-semibold max-w-5xl mb-2 mx-auto"
+                class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-9xl-fluid font-semibold max-w-5xl mb-2 mx-auto"
               >
                 I'm Alexander Trishin.
               </h1>
               <p
-                class="position uppercase mb-8"
+                class="min-h-0vw position uppercase mb-8"
               >
                 Full-Stack Developer
               </p>
-              <a
+              <button
                 class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4"
-                href="/#about"
                 variant="outlined"
               >
                 More about me
@@ -57,7 +56,7 @@ Object {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -85,23 +84,22 @@ Object {
             class="text-white px-4"
           >
             <h5
-              class="text-2xl-fluid font-poppins font-bold uppercase font-bold text-primary uppercase"
+              class="min-h-0vw text-2xl-fluid font-poppins font-bold uppercase font-bold text-primary uppercase"
             >
               Hello, World.
             </h5>
             <h1
-              class="text-6xl-fluid font-poppins font-bold normal-case text-9xl-fluid font-semibold max-w-5xl mb-2 mx-auto"
+              class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-9xl-fluid font-semibold max-w-5xl mb-2 mx-auto"
             >
               I'm Alexander Trishin.
             </h1>
             <p
-              class="position uppercase mb-8"
+              class="min-h-0vw position uppercase mb-8"
             >
               Full-Stack Developer
             </p>
-            <a
+            <button
               class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4"
-              href="/#about"
               variant="outlined"
             >
               More about me
@@ -120,7 +118,7 @@ Object {
                   fill="currentColor"
                 />
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </div>

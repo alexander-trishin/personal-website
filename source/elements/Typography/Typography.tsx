@@ -19,6 +19,7 @@ const Typography: TypographyComponent = forwardRef(
         const rootClassName = useMemo(
             () =>
                 clsx(
+                    'min-h-0vw',
                     !classNameOverride && {
                         'text-6xl-fluid': variant === 'h1',
                         'text-5xl-fluid': variant === 'h2',

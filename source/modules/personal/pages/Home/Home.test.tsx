@@ -12,7 +12,7 @@ describe('<Home />', () => {
 
         const wrapper = render(<Home />, { wrapper: MemoryRouter });
 
-        userEvent.click(wrapper.getByRole('link', { name: /more about me/i }));
+        userEvent.click(wrapper.getByRole('button', { name: /more about me/i }));
 
         expect(scrollIntoViewMock).toBeCalledTimes(1);
     });

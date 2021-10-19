@@ -13,21 +13,21 @@ const Footer = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>((props, ref)
             <div
                 className={clsx(
                     'flex',
-                    'xs:flex-col-reverse xs:justify-center',
+                    'flex-col-reverse justify-center',
                     'md:flex-row md:justify-between',
-                    'xs:max-w-xs md:max-w-2xl lg:max-w-4xl mx-auto'
+                    'max-w-xs md:max-w-2xl lg:max-w-4xl mx-auto'
                 )}
             >
                 <div
                     className={clsx(
                         'flex text-sm',
-                        'xs:flex-col-reverse xs:gap-y-2 xs:text-center xs:w-full',
+                        'flex-col-reverse gap-y-2 text-center w-full',
                         'md:flex-row md:gap-x-3 md:w-2/3',
                         'px-5'
                     )}
                 >
                     <span>© Alexander Trishin 2021.</span>
-                    <span className="xs:hidden md:inline-block">|</span>
+                    <span className="hidden md:inline-block">|</span>
                     <span>
                         Design by{' '}
                         <Button
@@ -41,7 +41,7 @@ const Footer = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>((props, ref)
 
                 <div
                     className={clsx(
-                        'xs:w-full xs:text-center xs:mb-4 md:mb-0',
+                        'w-full text-center mb-4 md:mb-0',
                         'md:w-1/3 md:text-right',
                         'px-5'
                     )}

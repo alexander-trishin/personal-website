@@ -7,7 +7,7 @@ describe('<GoTop />', () => {
     it('should be invisible by default', () => {
         const wrapper = render(<GoTop />, { wrapper: MemoryRouter });
 
-        const actual = wrapper.queryByRole('link');
+        const actual = wrapper.queryByRole('button');
 
         expect(actual).toBeNull();
     });
@@ -17,7 +17,7 @@ describe('<GoTop />', () => {
 
         fireEvent.scroll(window, { target: { scrollY: 150 } });
 
-        const actual = wrapper.getByRole('link');
+        const actual = wrapper.getByRole('button');
 
         expect(actual).toBeInTheDocument();
     });

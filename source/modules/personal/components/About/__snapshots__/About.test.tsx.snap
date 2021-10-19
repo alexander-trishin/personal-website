@@ -12,29 +12,45 @@ Object {
           class="text-center max-w-2xl mx-auto px-5 mb-8"
         >
           <h5
-            class="text-2xl-fluid font-poppins font-bold uppercase text-primary mb-1"
+            class="min-h-0vw text-2xl-fluid font-poppins font-bold uppercase text-primary mb-1"
           >
             About
           </h5>
           <h1
-            class="text-6xl-fluid font-poppins font-bold normal-case text-gray-800 xs:mb-10 md:mb-3"
+            class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-gray-800 mb-10 md:mb-3"
           >
             Let me introduce myself.
           </h1>
           <div
-            class="flex xs:flex-col xs:gap-y-2 xs:items-center md:flex-row md:gap-x-4"
+            class="flex flex-col gap-y-2 items-center md:flex-row md:gap-x-4"
           >
             <img
               alt="Profile Picture"
-              class="rounded-full xs:h-16 xs:w-16 md:h-24 md:w-24"
+              class="rounded-full h-16 w-16 md:h-24 md:w-24"
               src="test-file-stub"
             />
             <h6
-              class="text-2xl-fluid xs:text-center md:text-left"
+              class="min-h-0vw text-2xl-fluid text-center md:text-left"
             >
               Hi, I'm Alex. I am a software engineer, currently living in Minsk, Belarus. I like building things and learn something new every day. In my free time I like: read, travel, swim, listen to music and play electric guitar. I am currently mainly focused on building this website.
             </h6>
           </div>
+        </div>
+        <div
+          class="flex text-black flex-col gap-y-5 md:flex-row md:gap-x-5 md:justify-center max-w-2xl mx-auto px-5"
+        >
+          <button
+            class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4 focus:text-primary hover:text-primary"
+            variant="outlined"
+          >
+            Contact Me
+          </button>
+          <button
+            class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase px-8 py-4 text-white bg-gray-800 focus:bg-gray-800 hover:bg-gray-800 hidden"
+            variant="contained"
+          >
+            Download CV
+          </button>
         </div>
       </section>
     </div>
@@ -47,29 +63,45 @@ Object {
         class="text-center max-w-2xl mx-auto px-5 mb-8"
       >
         <h5
-          class="text-2xl-fluid font-poppins font-bold uppercase text-primary mb-1"
+          class="min-h-0vw text-2xl-fluid font-poppins font-bold uppercase text-primary mb-1"
         >
           About
         </h5>
         <h1
-          class="text-6xl-fluid font-poppins font-bold normal-case text-gray-800 xs:mb-10 md:mb-3"
+          class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-gray-800 mb-10 md:mb-3"
         >
           Let me introduce myself.
         </h1>
         <div
-          class="flex xs:flex-col xs:gap-y-2 xs:items-center md:flex-row md:gap-x-4"
+          class="flex flex-col gap-y-2 items-center md:flex-row md:gap-x-4"
         >
           <img
             alt="Profile Picture"
-            class="rounded-full xs:h-16 xs:w-16 md:h-24 md:w-24"
+            class="rounded-full h-16 w-16 md:h-24 md:w-24"
             src="test-file-stub"
           />
           <h6
-            class="text-2xl-fluid xs:text-center md:text-left"
+            class="min-h-0vw text-2xl-fluid text-center md:text-left"
           >
             Hi, I'm Alex. I am a software engineer, currently living in Minsk, Belarus. I like building things and learn something new every day. In my free time I like: read, travel, swim, listen to music and play electric guitar. I am currently mainly focused on building this website.
           </h6>
         </div>
+      </div>
+      <div
+        class="flex text-black flex-col gap-y-5 md:flex-row md:gap-x-5 md:justify-center max-w-2xl mx-auto px-5"
+      >
+        <button
+          class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4 focus:text-primary hover:text-primary"
+          variant="outlined"
+        >
+          Contact Me
+        </button>
+        <button
+          class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase px-8 py-4 text-white bg-gray-800 focus:bg-gray-800 hover:bg-gray-800 hidden"
+          variant="contained"
+        >
+          Download CV
+        </button>
       </div>
     </section>
   </div>,

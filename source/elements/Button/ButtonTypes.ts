@@ -7,10 +7,7 @@ type BaseProps = {
 };
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-    BaseProps & {
-        replace?: undefined;
-        to?: undefined;
-    };
+    BaseProps & { [key in keyof Pick<LinkProps, 'replace' | 'to'>]?: undefined };
 
 type AnchorProps = Omit<LinkProps, 'component' | 'innerRef'> & BaseProps;
 
