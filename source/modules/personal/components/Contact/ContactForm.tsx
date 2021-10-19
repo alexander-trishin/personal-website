@@ -21,7 +21,7 @@ interface ContactFormProps {
 const ContactForm: FC<ContactFormProps> = props => {
     const { onSubmit: onSubmitFromProps } = props;
     const {
-        formState: { errors, isSubmitting, isSubmitSuccessful },
+        formState: { errors, isSubmitting, isSubmitSuccessful, isValidating, isValid },
         handleSubmit,
         register,
         reset
@@ -82,7 +82,7 @@ const ContactForm: FC<ContactFormProps> = props => {
                     tabIndex={-1}
                     autoComplete="false"
                 />
-                <ContactFormSubmitButton isSubmitting={isSubmitting} />
+                <ContactFormSubmitButton isSubmitting={!isValidating && isValid && isSubmitting} />
             </fieldset>
         </form>
     );
