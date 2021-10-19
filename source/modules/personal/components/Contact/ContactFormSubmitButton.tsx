@@ -1,47 +1,44 @@
-import { ButtonHTMLAttributes, FC, ReactNode, useState } from 'react';
+import { ButtonHTMLAttributes, FC } from 'react';
 
-import { faCheck, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faSpinner, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 
 import { Button } from 'elements';
-import { useUpdateEffect } from 'utils/hooks';
+
+import type { SubmitStage } from './ContactFormTypes';
 
 interface ContactFormSubmitButtonProps
     extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> {
-    isSubmitting?: boolean;
+    stage?: SubmitStage;
 }
 
 const ContactFormSubmitButton: FC<ContactFormSubmitButtonProps> = props => {
-    const { className, disabled, isSubmitting, ...rest } = props;
+    const { className, disabled, stage = 'default', ...rest } = props;
 
-    const [content, setContent] = useState<ReactNode>('Submit');
-
-    useUpdateEffect(() => {
-        if (isSubmitting) {
-            setContent(
-                <>
-                    <FontAwesomeIcon
-                        className="align-middle animate-spin mr-2"
-                        icon={faSpinner}
-                        size="lg"
-                    />
-                    <span>Submitting...</span>
-                </>
-            );
-        } else {
-            setContent(
-                <>
-                    <FontAwesomeIcon className="align-middle mr-2" icon={faCheck} size="lg" />
-                    <span>Done!</span>
-                </>
-            );
-
-            setTimeout(() => {
-                setContent('Submit');
-            }, 5000);
-        }
-    }, [isSubmitting]);
+    const content =
+        stage === 'error' ? (
+            <>
+                <FontAwesomeIcon className="align-middle mr-2" icon={faTimes} size="lg" />
+                <span>Error :(</span>
+            </>
+        ) : stage === 'submitting' ? (
+            <>
+                <FontAwesomeIcon
+                    className="align-middle animate-spin mr-2"
+                    icon={faSpinner}
+                    size="lg"
+                />
+                <span>Submitting...</span>
+            </>
+        ) : stage === 'submitted' ? (
+            <>
+                <FontAwesomeIcon className="align-middle mr-2" icon={faCheck} size="lg" />
+                <span>Done!</span>
+            </>
+        ) : (
+            'Submit'
+        );
 
     return (
         <Button
@@ -54,7 +51,7 @@ const ContactFormSubmitButton: FC<ContactFormSubmitButtonProps> = props => {
                 'w-full mt-8',
                 className
             )}
-            disabled={disabled || isSubmitting}
+            disabled={disabled || stage === 'submitting'}
         >
             {content}
         </Button>

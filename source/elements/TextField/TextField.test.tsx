@@ -8,7 +8,7 @@ import TextField from './TextField';
 describe('<TextField />', () => {
     const props = {
         onChange: (event: ChangeEvent<HTMLInputElement> & ChangeEvent<HTMLTextAreaElement>) => {
-            props.value = event.target.value;
+            props.value += event.target.value;
         },
         value: ''
     };

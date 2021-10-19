@@ -1,4 +1,4 @@
-import { ChangeEvent, ComponentProps, FocusEvent, ForwardedRef, forwardRef, useState } from 'react';
+import { ComponentProps, FocusEvent, ForwardedRef, forwardRef, useState } from 'react';
 
 import clsx from 'clsx';
 
@@ -6,10 +6,9 @@ import { TextFieldComponent, TextFieldElement, TextFieldProps, isTextArea } from
 import TextFieldWrapper from './TextFieldWrapper';
 
 const TextField = forwardRef<TextFieldElement, TextFieldProps>((props, ref) => {
-    const { className, disabled, error, id, name, onBlur, onChange, onFocus } = props;
+    const { className, disabled, error, id, name, onBlur, onFocus, value } = props;
 
     const [hasFocus, setHasFocus] = useState(false);
-    const [value, setValue] = useState('');
 
     const handleBlur = (event: FocusEvent<HTMLInputElement> & FocusEvent<HTMLTextAreaElement>) => {
         setHasFocus(false);
@@ -19,13 +18,6 @@ const TextField = forwardRef<TextFieldElement, TextFieldProps>((props, ref) => {
     const handleFocus = (event: FocusEvent<HTMLInputElement> & FocusEvent<HTMLTextAreaElement>) => {
         setHasFocus(true);
         onFocus?.(event);
-    };
-
-    const handleChange = (
-        event: ChangeEvent<HTMLInputElement> & ChangeEvent<HTMLTextAreaElement>
-    ) => {
-        setValue(event.target.value);
-        onChange?.(event);
     };
 
     const sharedClassName = clsx(
@@ -58,9 +50,7 @@ const TextField = forwardRef<TextFieldElement, TextFieldProps>((props, ref) => {
         id: htmlFor,
         name,
         onBlur: handleBlur,
-        onChange: handleChange,
-        onFocus: handleFocus,
-        value
+        onFocus: handleFocus
     };
 
     if (isTextArea(props)) {

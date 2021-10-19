@@ -12,9 +12,7 @@ describe('<ContactFormSubmitButton />', () => {
     });
 
     it('should render "submitting" message', () => {
-        const wrapper = render(<ContactFormSubmitButton />);
-
-        wrapper.rerender(<ContactFormSubmitButton isSubmitting />);
+        const wrapper = render(<ContactFormSubmitButton stage="submitting" />);
 
         const actual = wrapper.getByText(/submitting/i);
 
@@ -22,11 +20,17 @@ describe('<ContactFormSubmitButton />', () => {
     });
 
     it('should render "done" message', () => {
-        const wrapper = render(<ContactFormSubmitButton isSubmitting />);
-
-        wrapper.rerender(<ContactFormSubmitButton />);
+        const wrapper = render(<ContactFormSubmitButton stage="submitted" />);
 
         const actual = wrapper.getByText(/done/i);
+
+        expect(actual).toBeInTheDocument();
+    });
+
+    it('should render "error" message', () => {
+        const wrapper = render(<ContactFormSubmitButton stage="error" />);
+
+        const actual = wrapper.getByText(/error/i);
 
         expect(actual).toBeInTheDocument();
     });

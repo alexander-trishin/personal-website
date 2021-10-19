@@ -13,6 +13,8 @@ const ContactController = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>((
             throw new Error('Hi bot, how are you?');
         }
 
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
         await axios.post(`${Environment.BaseUrl.WebApi}/contact-me`, { ...restData, from: email });
     };
 

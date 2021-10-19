@@ -1,3 +1,3 @@
 export { default as Contact } from './Contact';
 
-export type { IContactForm } from './ContactForm';
+export type { IContactForm } from './ContactFormTypes';

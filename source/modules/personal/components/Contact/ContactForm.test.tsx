@@ -1,6 +1,8 @@
 import { act, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
+import { sleep } from 'utils';
+
 import ContactForm from './ContactForm';
 
 describe('<ContactForm />', () => {
@@ -17,7 +19,7 @@ describe('<ContactForm />', () => {
         userEvent.click(wrapper.getByRole('button'));
 
         await act(async () => {
-            await new Promise(resolve => setTimeout(resolve, 0));
+            await sleep(0);
         });
 
         expect(onSubmitMock).toBeCalledWith({
