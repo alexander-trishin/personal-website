@@ -3,6 +3,7 @@ declare namespace NodeJS {
         readonly PUBLIC_URL: string;
         readonly REACT_APP_ANALYTICS_ID: string;
         readonly REACT_APP_ANALYTICS_URI: string;
+        readonly REACT_APP_WEBAPI_BASEURL: string;
     }
 }
 
