@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Contact /> should match snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="relative pt-32 pb-16"
+      >
+        <div
+          class="text-center max-w-2xl mx-auto px-5 mb-8"
+        >
+          <h5
+            class="min-h-0vw text-2xl-fluid font-poppins font-bold uppercase text-primary uppercase"
+          >
+            Contact
+          </h5>
+          <h1
+            class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-white"
+          >
+            I'd Love To Hear From You.
+          </h1>
+          <h6
+            class="min-h-0vw text-2xl-fluid"
+          >
+            Feel free to get in touch.
+          </h6>
+        </div>
+        <div
+          class="max-w-2xl mx-auto px-5"
+        >
+          <form
+            class="relative"
+          >
+            <fieldset
+              class="inline-block text-white min-w-0 w-full"
+            >
+              <div
+                class="relative flex flex-col border-b border-gray-500"
+              >
+                <input
+                  class="text-base leading-none border-0 outline-none shadow-none transition duration-200 h-16 px-4 pt-6 pb-1 bg-transparent"
+                  id="name"
+                  name="name"
+                  type="text"
+                  value=""
+                />
+                <label
+                  class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                  for="name"
+                >
+                  Name
+                </label>
+              </div>
+              <div
+                class="relative flex flex-col border-b border-gray-500"
+              >
+                <input
+                  class="text-base leading-none border-0 outline-none shadow-none transition duration-200 h-16 px-4 pt-6 pb-1 bg-transparent"
+                  id="email"
+                  name="email"
+                  type="email"
+                  value=""
+                />
+                <label
+                  class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                  for="email"
+                >
+                  Email
+                </label>
+              </div>
+              <div
+                class="relative flex flex-col border-b border-gray-500"
+              >
+                <input
+                  class="text-base leading-none border-0 outline-none shadow-none transition duration-200 h-16 px-4 pt-6 pb-1 bg-transparent"
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  value=""
+                />
+                <label
+                  class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                  for="subject"
+                >
+                  Subject
+                </label>
+              </div>
+              <div
+                class="relative flex flex-col border-b border-gray-500"
+              >
+                <textarea
+                  class="text-base leading-none border-0 outline-none shadow-none transition duration-200 h-48 px-4 pt-9 pb-1 bg-transparent"
+                  cols="50"
+                  id="message"
+                  name="message"
+                  rows="10"
+                />
+                <label
+                  class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                  for="message"
+                >
+                  Message
+                </label>
+              </div>
+              <input
+                autocomplete="false"
+                class="hidden"
+                name="xmessage"
+                tabindex="-1"
+              />
+              <button
+                class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase px-8 py-4 bg-primary focus:opacity-80 hover:opacity-80 outline-none disabled:cursor-not-allowed disabled:opacity-40 w-full mt-8"
+                type="submit"
+                variant="contained"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="relative pt-32 pb-16"
+    >
+      <div
+        class="text-center max-w-2xl mx-auto px-5 mb-8"
+      >
+        <h5
+          class="min-h-0vw text-2xl-fluid font-poppins font-bold uppercase text-primary uppercase"
+        >
+          Contact
+        </h5>
+        <h1
+          class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-white"
+        >
+          I'd Love To Hear From You.
+        </h1>
+        <h6
+          class="min-h-0vw text-2xl-fluid"
+        >
+          Feel free to get in touch.
+        </h6>
+      </div>
+      <div
+        class="max-w-2xl mx-auto px-5"
+      >
+        <form
+          class="relative"
+        >
+          <fieldset
+            class="inline-block text-white min-w-0 w-full"
+          >
+            <div
+              class="relative flex flex-col border-b border-gray-500"
+            >
+              <input
+                class="text-base leading-none border-0 outline-none shadow-none transition duration-200 h-16 px-4 pt-6 pb-1 bg-transparent"
+                id="name"
+                name="name"
+                type="text"
+                value=""
+              />
+              <label
+                class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                for="name"
+              >
+                Name
+              </label>
+            </div>
+            <div
+              class="relative flex flex-col border-b border-gray-500"
+            >
+              <input
+                class="text-base leading-none border-0 outline-none shadow-none transition duration-200 h-16 px-4 pt-6 pb-1 bg-transparent"
+                id="email"
+                name="email"
+                type="email"
+                value=""
+              />
+              <label
+                class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                for="email"
+              >
+                Email
+              </label>
+            </div>
+            <div
+              class="relative flex flex-col border-b border-gray-500"
+            >
+              <input
+                class="text-base leading-none border-0 outline-none shadow-none transition duration-200 h-16 px-4 pt-6 pb-1 bg-transparent"
+                id="subject"
+                name="subject"
+                type="text"
+                value=""
+              />
+              <label
+                class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                for="subject"
+              >
+                Subject
+              </label>
+            </div>
+            <div
+              class="relative flex flex-col border-b border-gray-500"
+            >
+              <textarea
+                class="text-base leading-none border-0 outline-none shadow-none transition duration-200 h-48 px-4 pt-9 pb-1 bg-transparent"
+                cols="50"
+                id="message"
+                name="message"
+                rows="10"
+              />
+              <label
+                class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                for="message"
+              >
+                Message
+              </label>
+            </div>
+            <input
+              autocomplete="false"
+              class="hidden"
+              name="xmessage"
+              tabindex="-1"
+            />
+            <button
+              class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase px-8 py-4 bg-primary focus:opacity-80 hover:opacity-80 outline-none disabled:cursor-not-allowed disabled:opacity-40 w-full mt-8"
+              type="submit"
+              variant="contained"
+            >
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
