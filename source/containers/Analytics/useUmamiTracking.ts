@@ -12,15 +12,16 @@ const useUmamiTracking = (isEnabled: boolean) => {
                 const button = target.closest('button');
 
                 if (a) {
+                    const { href, textContent, title } = a;
+
                     window.umami?.trackEvent(
-                        `[element] a [title] ${a.title} [link] ${a.href}`,
+                        textContent || title ? `Link to ${textContent || title}` : href,
                         eventType
                     );
                 } else if (button) {
-                    window.umami?.trackEvent(
-                        `[element] button [content] ${button.value || button.title}`,
-                        eventType
-                    );
+                    const { id, name, textContent, title } = button;
+
+                    window.umami?.trackEvent(textContent || title || name || id, eventType);
                 }
             }
         };
