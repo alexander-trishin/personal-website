@@ -19,9 +19,18 @@ jest.mock('modules/personal', () => ({
 }));
 
 describe('<Application />', () => {
+    beforeEach(() => {
+        jest.useFakeTimers();
+    });
+
+    afterEach(() => {
+        jest.useRealTimers();
+    });
+
     it('should use analytics in production mode', () => {
         const wrapper = render(<Application />);
 
+        jest.advanceTimersByTime(1000);
         const actual = wrapper.getByTestId('analytics');
 
         expect(actual).toBeDefined();
@@ -30,6 +39,7 @@ describe('<Application />', () => {
     it('should render personal module', () => {
         const wrapper = render(<Application />);
 
+        jest.advanceTimersByTime(1000);
         const actual = wrapper.getByTestId('personal');
 
         expect(actual).toBeDefined();

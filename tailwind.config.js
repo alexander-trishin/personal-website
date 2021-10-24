@@ -1,7 +1,10 @@
 /* eslint-disable */
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 
+const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default;
+
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 delete colors.lightBlue;
 
@@ -30,6 +33,14 @@ module.exports = {
     purge: ['./source/**/*.tsx', './public/index.html'],
     darkMode: false,
     theme: {
+        container: {
+            padding: {
+                DEFAULT: '2rem',
+                lg: '4rem',
+                xl: '5rem',
+                '2xl': '6rem'
+            }
+        },
         extend: {
             borderWidth: {
                 3: '3px'
@@ -60,8 +71,28 @@ module.exports = {
             },
             scale: {
                 80: '.8'
-            }
+            },
+            zIndex: Object.fromEntries([60, 70, 80, 90, 100].map(value => [value, value]))
         }
     },
-    plugins: []
+    plugins: [
+        plugin(function ({ addUtilities, theme, variants }) {
+            let colors = flattenColorPalette(theme('borderColor'));
+            delete colors['default'];
+
+            if (this.theme?.extend?.colors !== undefined) {
+                colors = Object.assign(colors, this.theme.extend.colors);
+            }
+
+            const colorMap = Object.keys(colors).map(color => ({
+                [`.border-t-${color}`]: { borderTopColor: colors[color] },
+                [`.border-r-${color}`]: { borderRightColor: colors[color] },
+                [`.border-b-${color}`]: { borderBottomColor: colors[color] },
+                [`.border-l-${color}`]: { borderLeftColor: colors[color] }
+            }));
+            const utilities = Object.assign({}, ...colorMap);
+
+            addUtilities(utilities, variants('borderColor'));
+        })
+    ]
 };
