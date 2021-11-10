@@ -3,7 +3,7 @@ import { MouseEventHandler, RefObject, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { About, Footer, Intro } from 'modules/personal/components';
-import { ContactController } from 'modules/personal/containers';
+import { ContactController, ResumeController } from 'modules/personal/containers';
 import { GoTop } from 'modules/personal/elements';
 
 const Home = () => {
@@ -34,6 +34,7 @@ const Home = () => {
             <main>
                 <Intro id="intro" ref={introRef} onShowMore={scrollToAboutSection} />
                 <About id="about" ref={aboutRef} onContactMe={scrollToContactSection} />
+                <ResumeController id="resume" />
                 <ContactController id="contact" ref={contactRef} />
             </main>
             <Footer>

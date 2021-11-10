@@ -1,4 +1,4 @@
-import { CSSProperties, HTMLAttributes, MouseEventHandler, forwardRef } from 'react';
+import { HTMLAttributes, MouseEventHandler, forwardRef } from 'react';
 
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,24 +7,13 @@ import clsx from 'clsx';
 import { Button, Typography } from 'elements';
 import { Social } from 'modules/personal/elements';
 
-import BackgroundUrl from '../../assets/images/intro-bg.jpg';
-
 import './Intro.pcss';
-
 interface IntroProps extends HTMLAttributes<HTMLElement> {
     onShowMore?: MouseEventHandler<HTMLElement>;
 }
 
-const styles: Record<string, CSSProperties> = {
-    root: {
-        background: `#151515 url(${BackgroundUrl}) no-repeat center bottom`,
-        backgroundSize: 'cover',
-        backgroundAttachment: 'fixed'
-    }
-};
-
 const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
-    const { className, onShowMore, style = {}, ...rest } = props;
+    const { className, onShowMore, ...rest } = props;
 
     return (
         <section
@@ -34,7 +23,6 @@ const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
                 'relative flex justify-center items-center min-h-lg h-full w-full',
                 className
             )}
-            style={{ ...styles.root, ...style }}
         >
             <div className="absolute left-0 top-0 h-full w-full bg-gray-900 opacity-80"></div>
 

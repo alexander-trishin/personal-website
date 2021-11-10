@@ -7,7 +7,6 @@ Object {
     <div>
       <section
         class="relative flex justify-center items-center min-h-lg h-full w-full"
-        style="background: rgb(21, 21, 21) url(test-file-stub) no-repeat bottom; background-size: cover; background-attachment: fixed;"
       >
         <div
           class="absolute left-0 top-0 h-full w-full bg-gray-900 opacity-80"
@@ -37,7 +36,7 @@ Object {
                 Full-Stack Developer
               </p>
               <button
-                class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4"
+                class="inline-block transition-all duration-300 text-center disabled:cursor-not-allowed disabled:opacity-40 font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4"
                 variant="outlined"
               >
                 More about me
@@ -69,7 +68,6 @@ Object {
   "container": <div>
     <section
       class="relative flex justify-center items-center min-h-lg h-full w-full"
-      style="background: rgb(21, 21, 21) url(test-file-stub) no-repeat bottom; background-size: cover; background-attachment: fixed;"
     >
       <div
         class="absolute left-0 top-0 h-full w-full bg-gray-900 opacity-80"
@@ -99,7 +97,7 @@ Object {
               Full-Stack Developer
             </p>
             <button
-              class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4"
+              class="inline-block transition-all duration-300 text-center disabled:cursor-not-allowed disabled:opacity-40 font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4"
               variant="outlined"
             >
               More about me

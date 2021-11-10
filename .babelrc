@@ -20,7 +20,7 @@
             {
                 "loaderMap": {
                     "svg": {
-                        "Svg": "@svgr/webpack?-svgo,+titleProp,+ref![path]"
+                        "ReactComponent": "@svgr/webpack?-svgo,+titleProp,+ref![path]"
                     }
                 }
             }

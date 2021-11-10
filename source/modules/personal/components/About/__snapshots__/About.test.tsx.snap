@@ -40,16 +40,10 @@ Object {
           class="flex text-black flex-col gap-y-5 md:flex-row md:gap-x-5 md:justify-center max-w-2xl mx-auto px-5"
         >
           <button
-            class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4 focus:text-primary hover:text-primary"
+            class="inline-block transition-all duration-300 text-center disabled:cursor-not-allowed disabled:opacity-40 font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4 focus:text-primary hover:text-primary"
             variant="outlined"
           >
             Contact Me
-          </button>
-          <button
-            class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase px-8 py-4 text-white bg-gray-800 focus:bg-gray-800 hover:bg-gray-800 hidden"
-            variant="contained"
-          >
-            Download CV
           </button>
         </div>
       </section>
@@ -91,16 +85,10 @@ Object {
         class="flex text-black flex-col gap-y-5 md:flex-row md:gap-x-5 md:justify-center max-w-2xl mx-auto px-5"
       >
         <button
-          class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4 focus:text-primary hover:text-primary"
+          class="inline-block transition-all duration-300 text-center disabled:cursor-not-allowed disabled:opacity-40 font-poppins font-bold text-button uppercase text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4 focus:text-primary hover:text-primary"
           variant="outlined"
         >
           Contact Me
-        </button>
-        <button
-          class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase px-8 py-4 text-white bg-gray-800 focus:bg-gray-800 hover:bg-gray-800 hidden"
-          variant="contained"
-        >
-          Download CV
         </button>
       </div>
     </section>

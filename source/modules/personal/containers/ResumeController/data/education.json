@@ -1,0 +1,20 @@
+[
+    {
+        "startDate": "2014-09-01",
+        "endDate": "2016-06-01",
+        "institution": "Ryazan State Radio Engineering University",
+        "faculty": "Computational And Applied Mathematics",
+        "department": "Programming",
+        "speciality": "Software Engineering",
+        "degree": "Master Degree"
+    },
+    {
+        "startDate": "2009-09-01",
+        "endDate": "2014-06-01",
+        "institution": "Ryazan State Radio Engineering University",
+        "faculty": "Automatization and Information Technologies in Management",
+        "department": "Information Measuring and Biomedical Engineering",
+        "speciality": "Information Measuring Systems and Technologies",
+        "degree": "Specialist Degree"
+    }
+]

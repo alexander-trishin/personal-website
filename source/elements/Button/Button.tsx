@@ -15,10 +15,11 @@ const Button = forwardRef<PolymorphicButtonElement, PolymorphicButtonProps>((pro
 
     const mergedClassName = clsx(
         'inline-block transition-all duration-300 text-center',
+        'disabled:cursor-not-allowed disabled:opacity-40',
         {
             'font-poppins font-bold text-button uppercase':
                 variant === 'contained' || variant === 'outlined',
-            'px-8 py-4': variant === 'contained',
+            'focus:opacity-80 hover:opacity-80 outline-none px-8 py-4': variant === 'contained',
             'text-current border-solid border-2 border-current focus:border-primary hover:border-primary px-8 py-4':
                 variant === 'outlined',
             'focus:text-primary hover:text-primary': variant === 'text'
@@ -30,7 +31,7 @@ const Button = forwardRef<PolymorphicButtonElement, PolymorphicButtonProps>((pro
         const { children, ...rest } = props;
         const { to, ...restAnchorProps } = rest;
 
-        if (typeof to === 'string' && /^https?:\/\//.test(to)) {
+        if (typeof to === 'string' && (/^https?:\/\//.test(to) || props.download)) {
             return (
                 <a
                     {...restAnchorProps}

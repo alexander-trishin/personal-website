@@ -111,7 +111,7 @@ Object {
                 tabindex="-1"
               />
               <button
-                class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase px-8 py-4 bg-primary focus:opacity-80 hover:opacity-80 outline-none disabled:cursor-not-allowed disabled:opacity-40 w-full mt-8"
+                class="inline-block transition-all duration-300 text-center disabled:cursor-not-allowed disabled:opacity-40 font-poppins font-bold text-button uppercase focus:opacity-80 hover:opacity-80 outline-none px-8 py-4 bg-primary w-full mt-8"
                 type="submit"
                 variant="contained"
               >
@@ -230,7 +230,7 @@ Object {
               tabindex="-1"
             />
             <button
-              class="inline-block transition-all duration-300 text-center font-poppins font-bold text-button uppercase px-8 py-4 bg-primary focus:opacity-80 hover:opacity-80 outline-none disabled:cursor-not-allowed disabled:opacity-40 w-full mt-8"
+              class="inline-block transition-all duration-300 text-center disabled:cursor-not-allowed disabled:opacity-40 font-poppins font-bold text-button uppercase focus:opacity-80 hover:opacity-80 outline-none px-8 py-4 bg-primary w-full mt-8"
               type="submit"
               variant="contained"
             >

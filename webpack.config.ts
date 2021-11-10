@@ -1,4 +1,5 @@
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import CompressionWebpackPlugin from 'compression-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import InterpolateHtmlWebpackPlugin from 'interpolate-html-plugin';
@@ -29,7 +30,7 @@ const createWebpackConfiguration = (): Configuration => {
         bail: isProduction,
         mode: isProduction ? 'production' : 'development',
         target: isProduction ? 'browserslist' : 'web',
-        devtool: isProduction ? 'source-map' : 'eval',
+        devtool: !isProduction && 'eval',
         entry: {
             main: [paths.indexTsx]
         },
@@ -99,7 +100,28 @@ const createWebpackConfiguration = (): Configuration => {
                             ]
                         },
                         {
-                            exclude: [/\.(tsx?)$/, /\.html$/, /\.json$/],
+                            test: /\.svg$/,
+                            oneOf: [
+                                {
+                                    dependency: { not: ['url'] },
+                                    loader: '@svgr/webpack',
+                                    options: {
+                                        prettier: false,
+                                        svgo: false,
+                                        titleProp: true,
+                                        ref: true
+                                    }
+                                },
+                                {
+                                    type: 'asset'
+                                }
+                            ],
+                            issuer: {
+                                and: [/\.tsx?$/]
+                            }
+                        },
+                        {
+                            exclude: [/\.tsx?$/, /\.html$/, /\.json$/, /\.svg$/],
                             type: 'asset',
                             parser: {
                                 dataUrlCondition: {
@@ -184,7 +206,17 @@ const createWebpackConfiguration = (): Configuration => {
                               }
                           ]
                           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                      }) as any
+                      }) as any,
+                      new CompressionWebpackPlugin({
+                          algorithm: 'brotliCompress',
+                          filename: '[path][base].br[query]',
+                          threshold: 8192
+                      }),
+                      new CompressionWebpackPlugin({
+                          algorithm: 'gzip',
+                          filename: '[path][base].gz[query]',
+                          threshold: 8192
+                      })
                   ]
                 : [new ReactRefreshWebpackPlugin()])
         ],

@@ -1,0 +1,23 @@
+[
+    {
+        "startDate": "2017-12-01",
+        "endDate": null,
+        "company": "EPAM Systems",
+        "position": "Senior Software Engineer",
+        "projects": []
+    },
+    {
+        "startDate": "2015-01-01",
+        "endDate": "2017-12-01",
+        "company": "EPAM Systems",
+        "position": "Software Engineer",
+        "projects": []
+    },
+    {
+        "startDate": "2013-11-01",
+        "endDate": "2015-01-01",
+        "company": "EPAM Systems",
+        "position": "Junior Software Engineer",
+        "projects": []
+    }
+]

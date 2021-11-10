@@ -19,3 +19,33 @@
 #intro .social {
     font-size: clamp(24px, calc(1.5rem + (33 - 24) * ((100vw - 480px) / (920 - 480))), 33px);
 }
+
+#intro {
+    background: #151515 url('images/intro-bg-w3000.jpg') no-repeat center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 2301px) {
+    #intro {
+        background-image: url('images/intro-bg-w2301.jpg');
+    }
+}
+
+@media only screen and (max-width: 1825px) {
+    #intro {
+        background-image: url('images/intro-bg-w1825.jpg');
+    }
+}
+
+@media only screen and (max-width: 1241px) {
+    #intro {
+        background-image: url('images/intro-bg-w1241.jpg');
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #intro {
+        background-image: url('images/intro-bg-w400.jpg');
+    }
+}

@@ -45,12 +45,7 @@ const ContactFormSubmitButton: FC<ContactFormSubmitButtonProps> = props => {
             {...rest}
             type="submit"
             variant="contained"
-            className={clsx(
-                'bg-primary focus:opacity-80 hover:opacity-80 outline-none',
-                'disabled:cursor-not-allowed disabled:opacity-40',
-                'w-full mt-8',
-                className
-            )}
+            className={clsx('bg-primary w-full mt-8', className)}
             disabled={disabled || stage === 'submitting'}
         >
             {content}

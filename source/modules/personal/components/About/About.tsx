@@ -8,11 +8,10 @@ import AvatarSrc from '../../assets/images/avatar.jpg';
 
 interface AboutProps extends HTMLAttributes<HTMLElement> {
     onContactMe?: MouseEventHandler<HTMLElement>;
-    onDownloadCV?: MouseEventHandler<HTMLElement>;
 }
 
 const About = forwardRef<HTMLElement, AboutProps>((props, ref) => {
-    const { className, onContactMe, onDownloadCV, ...rest } = props;
+    const { className, onContactMe, ...rest } = props;
 
     return (
         <section {...rest} ref={ref} className={clsx('bg-white pt-32 pb-36', className)}>
@@ -54,13 +53,6 @@ const About = forwardRef<HTMLElement, AboutProps>((props, ref) => {
                     onClick={onContactMe}
                 >
                     Contact Me
-                </Button>
-                <Button
-                    variant="contained"
-                    className="text-white bg-gray-800 focus:bg-gray-800 hover:bg-gray-800 hidden"
-                    onClick={onDownloadCV}
-                >
-                    Download CV
                 </Button>
             </div>
         </section>
