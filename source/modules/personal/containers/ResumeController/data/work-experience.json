@@ -4,20 +4,170 @@
         "endDate": null,
         "company": "EPAM Systems",
         "position": "Senior Software Engineer",
-        "projects": []
+        "projects": [
+            {
+                "description": "An electronic platform for ordering books.",
+                "participation": "Led a team of 4 developers. Implemented 12 microservices. Created reverse-proxy service using Yarp. Implemented swagger generation library for Yarp which was used by other teams. Was responsible for making technical decisions. Performed knowledge transfer.",
+                "technologies": [
+                    ".Net Core",
+                    "Asp.Net Core",
+                    "xUnit",
+                    "Terraform",
+                    "Atlantis",
+                    "AWS (Lambda",
+                    "DynamoDB",
+                    "Kinesis",
+                    "EC2",
+                    "EKS",
+                    "SQS",
+                    "SNS",
+                    "S3",
+                    "KMS",
+                    "API Gateway",
+                    "CloudFormation",
+                    "CloudWatch",
+                    "X-Ray)",
+                    "Git",
+                    "GitHub",
+                    "Yenkins",
+                    "Rally"
+                ]
+            },
+            {
+                "description": "Portal for the analysis of insurance submissions.",
+                "participation": "Participated in all stages of software production. Researched and introduced new technologies to the team. Improved a general quality of code style by ESLint tuning and Prettier integration. Coordinated a distributed team. Conducted demo sessions. Configured CI/CD pipeline. Created and maintained documentation.",
+                "technologies": [
+                    "React.js",
+                    "Next.js",
+                    "react-table",
+                    "react-hook-form",
+                    "Jest",
+                    "testing-library",
+                    "d3js",
+                    "GraphQL",
+                    "Storybook",
+                    "Tailwind CSS",
+                    "ESLint",
+                    "Prettier",
+                    "Babel",
+                    "Webpack",
+                    "InvisionApp",
+                    "AWS (Lambda",
+                    "DynamoDB",
+                    "SQS",
+                    "SNS",
+                    "S3",
+                    "API Gateway",
+                    "CloudFormation)",
+                    "Git",
+                    "Bitbucket",
+                    "Bamboo",
+                    "Jira",
+                    "Confluence"
+                ]
+            },
+            {
+                "description": "Responsive web application for receiving alerts from multiple weather feeds.",
+                "participation": "Designed and implemented 3 micro-services using .Net stack. Implemented voice and push notifications for mobile version. Made a huge contribution to the development of 3 UI modules: subscription to weather events, configuration of alert notifications, reports and analysis. Developed and maintained shared technical frontend stack used across the project. Was responsible for technical and architectural decisions affecting multiple teams. Upgraded 5 legacy projects to the latest stack. Troubleshooted production issues. Conducted technical interviews. Performed on-boarding of the new team members.",
+                "technologies": [
+                    ".Net Core",
+                    "Asp.Net Core",
+                    "OData",
+                    "EF Core",
+                    "RabbitMQ",
+                    "MongoDB",
+                    "PostgreSQL",
+                    "Redis",
+                    "ElasticSearch",
+                    "React.js",
+                    "Redux/Redux-Saga/Redux-Form",
+                    "DraftJS",
+                    "Storybook",
+                    "ESLint",
+                    "Prettier",
+                    "Jest",
+                    "Enzyme",
+                    "Babel",
+                    "Webpack",
+                    "Team City",
+                    "Octopus Deploy",
+                    "Git",
+                    "Jira",
+                    "Confluence"
+                ]
+            },
+            {
+                "description": "A reference management tool that automatically formats bibliographies with styles and citations.",
+                "participation": "Designed and implemented add-in in two versions: Desktop (MS Office) and Web (MS 365). Participated in all SDLC phases. Implemented a conversion tool for faster migration from similar products. Led a team of 2 developers and 1 QA engineer. Performed a code review. Improved code quality by integrating SonarQube. Automated software delivery process.",
+                "technologies": [
+                    ".Net",
+                    "WinForms",
+                    "VSTO",
+                    "SQLite",
+                    "Node.js",
+                    "React.js",
+                    "Redux/Redux-Saga/Redux-Form",
+                    "Fabric UI",
+                    "Jest",
+                    "Enzyme",
+                    "SonarQube",
+                    "Jira",
+                    "Confluence",
+                    "Git"
+                ]
+            }
+        ]
     },
     {
         "startDate": "2015-01-01",
         "endDate": "2017-12-01",
         "company": "EPAM Systems",
         "position": "Software Engineer",
-        "projects": []
+        "projects": [
+            {
+                "description": "A web application for predicting project workload.",
+                "participation": "Developed the application architecture. Implemented SPA using Angular. Implemented Rest API using Asp.Net. Created an OpenAPI definition using swagger. Implemented CI/CD pipelines. Prepared documentation, performed knowledge transfer sessions.",
+                "technologies": [
+                    ".Net Core",
+                    "Asp.Net Core",
+                    "EF Core",
+                    "xUnit",
+                    "PostgreSQL",
+                    "Redis",
+                    "Docker",
+                    "Angular",
+                    "Jenkins",
+                    "Jira",
+                    "Confluence",
+                    "Git"
+                ]
+            },
+            {
+                "description": "Customization of the solutions based on the 3E Platform for different clients. 3E is a seamlessly integrated business process platform that offers powerful core financial and practice management features and built-in application capabilities: Financial Management, Client and Matter Management, Risk Management, Business Development.",
+                "participation": "Developed 3E customizations for ~15 clients. Developed two 3E frameworks, which began to be widely used by 3E developers. Implemented 4 POCs, one of which became a subproject (a team of 5 people). Designed and implemented solution for mobile approval. Participated in code review. Collected and analyzed the customer's requirements. Created and maintained project documentation. Communicated with the customer directly. Demonstrated  the implemented features. Led a team of 3 developers and 2 QA engineers. Was in business trips.",
+                "technologies": [
+                    ".Net",
+                    "MS SQL",
+                    "WPF",
+                    "3E Platform",
+                    "Jira",
+                    "Confluence",
+                    "TFS"
+                ]
+            }
+        ]
     },
     {
         "startDate": "2013-11-01",
         "endDate": "2015-01-01",
         "company": "EPAM Systems",
         "position": "Junior Software Engineer",
-        "projects": []
+        "projects": [
+            {
+                "description": "Desktop application for processing bank receipts. This application analyzes bank receipts, stores them in a database and builds analytical reports.",
+                "participation": "Implemented a service for parsing bank receipts. Improved performance of ~60 scripts in database (speed up by average of 20-40%).",
+                "technologies": [".Net", "MS SQL", "SVN"]
+            }
+        ]
     }
 ]

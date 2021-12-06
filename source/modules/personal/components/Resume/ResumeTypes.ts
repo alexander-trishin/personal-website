@@ -8,11 +8,9 @@ export interface IEducation {
 }
 
 export interface IProject {
-    period: string;
-    area: string;
-    objective: string;
-    roles: string[];
-    participation: string[];
+    description: string;
+    participation: string;
+    technologies: string[];
 }
 
 export interface IWorkExperience {

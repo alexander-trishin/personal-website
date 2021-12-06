@@ -18,8 +18,6 @@ interface ResumeProps extends HTMLAttributes<HTMLElement> {
 const Resume = forwardRef<HTMLElement, ResumeProps>((props, ref) => {
     const { className, education, workExperience, ...rest } = props;
 
-    const hasWorkExperience = workExperience.some(x => x.projects.length > 0);
-
     return (
         <section {...rest} ref={ref} className={clsx('bg-gray-100 py-32', className)}>
             <div className="text-center max-w-2xl mx-auto px-5 mb-8">
@@ -31,63 +29,50 @@ const Resume = forwardRef<HTMLElement, ResumeProps>((props, ref) => {
                 </Typography>
 
                 <Typography className="text-gray-500" variant="subtitle">
-                    {hasWorkExperience
-                        ? 'Later this section will be available for download :)'
-                        : 'This section is under active development...'}
+                    Later this section will be available for download :)
                 </Typography>
             </div>
 
-            {hasWorkExperience && (
-                <ResumeArticle header="Work Experience" className="mb-16">
-                    {workExperience.map(item => {
-                        const { company, position, period, projects } = item;
+            <ResumeArticle header="Work Experience" className="mb-16">
+                {workExperience.map(item => {
+                    const { company, position, period, projects } = item;
 
-                        return (
-                            <ResumeBlock
-                                key={period}
-                                icon={faGraduationCap}
-                                periodHeader={position}
-                                period={period}
-                                contentHeader={company}
-                            >
-                                <ResumeBlockList>
-                                    {projects.map((project, projectIndex) => {
-                                        const { period, area, objective, participation } = project;
+                    return (
+                        <ResumeBlock
+                            key={period}
+                            icon={faGraduationCap}
+                            periodHeader={position}
+                            period={period}
+                            contentHeader={company}
+                        >
+                            <ResumeBlockList>
+                                {projects.map((project, projectIndex) => {
+                                    const { description, participation, technologies } = project;
 
-                                        return (
-                                            <Fragment key={period}>
-                                                <ResumeBlockList
-                                                    className={clsx({
-                                                        'mt-6': projectIndex !== 0
-                                                    })}
-                                                >
-                                                    <ResumeBlockList.Item header="Project">
-                                                        {`[${area}] ${objective}`}
-                                                    </ResumeBlockList.Item>
-                                                    <ResumeBlockList.Item header="Period">
-                                                        {period}
-                                                    </ResumeBlockList.Item>
-                                                    <ResumeBlockList.Item header="Participation" />
-                                                    <ResumeBlockList
-                                                        disc
-                                                        className="text-primary ml-3"
-                                                    >
-                                                        {participation.map(value => (
-                                                            <ResumeBlockList.Item key={value}>
-                                                                <small>{value}</small>
-                                                            </ResumeBlockList.Item>
-                                                        ))}
-                                                    </ResumeBlockList>
-                                                </ResumeBlockList>
-                                            </Fragment>
-                                        );
-                                    })}
-                                </ResumeBlockList>
-                            </ResumeBlock>
-                        );
-                    })}
-                </ResumeArticle>
-            )}
+                                    return (
+                                        <Fragment key={description}>
+                                            <ResumeBlockList.Item header="Project">
+                                                {description}
+                                            </ResumeBlockList.Item>
+                                            <ResumeBlockList.Item header="Participation">
+                                                {participation}
+                                            </ResumeBlockList.Item>
+                                            <ResumeBlockList.Item
+                                                header="Technologies/Tools"
+                                                className={clsx({
+                                                    'mb-8': projectIndex !== projects.length - 1
+                                                })}
+                                            >
+                                                {technologies.join(', ')}
+                                            </ResumeBlockList.Item>
+                                        </Fragment>
+                                    );
+                                })}
+                            </ResumeBlockList>
+                        </ResumeBlock>
+                    );
+                })}
+            </ResumeArticle>
 
             <ResumeArticle header="Education" className="mb-16">
                 {education.map(item => {

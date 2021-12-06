@@ -23,21 +23,21 @@ const ResumeController = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>((p
     useEffect(() => {
         setEducation(
             educationJson.map<IEducation>(info => {
-                const { startDate, endDate, ...restInfo } = info;
+                const { startDate, endDate, ...rest } = info;
 
                 return {
-                    ...restInfo,
+                    ...rest,
                     period: formatTimeline(startDate, endDate)
                 };
             })
         );
 
         setWorkExperience(
-            workExperienceJson.map<IWorkExperience>(education => {
-                const { startDate, endDate, ...restEducationProps } = education;
+            workExperienceJson.map<IWorkExperience>(experience => {
+                const { startDate, endDate, ...rest } = experience;
 
                 return {
-                    ...restEducationProps,
+                    ...rest,
                     period: formatTimeline(startDate, endDate)
                 };
             })

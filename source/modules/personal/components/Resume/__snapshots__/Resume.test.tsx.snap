@@ -24,9 +24,29 @@ Object {
           <h6
             class="min-h-0vw text-2xl-fluid text-gray-500"
           >
-            This section is under active development...
+            Later this section will be available for download :)
           </h6>
         </div>
+        <article
+          class="max-w-5xl mx-auto mb-16"
+        >
+          <div
+            class="text-center px-5 mb-5"
+          >
+            <h2
+              class="min-h-0vw text-5xl-fluid font-poppins font-bold normal-case text-primary"
+            >
+              Work Experience
+            </h2>
+          </div>
+          <div
+            class="relative px-5"
+          >
+            <div
+              class="bg-black opacity-10 absolute top-0 left-8 md:left-1/3 h-full w-px ml-3 md:ml-2"
+            />
+          </div>
+        </article>
         <article
           class="max-w-5xl mx-auto mb-16"
         >
@@ -70,9 +90,29 @@ Object {
         <h6
           class="min-h-0vw text-2xl-fluid text-gray-500"
         >
-          This section is under active development...
+          Later this section will be available for download :)
         </h6>
       </div>
+      <article
+        class="max-w-5xl mx-auto mb-16"
+      >
+        <div
+          class="text-center px-5 mb-5"
+        >
+          <h2
+            class="min-h-0vw text-5xl-fluid font-poppins font-bold normal-case text-primary"
+          >
+            Work Experience
+          </h2>
+        </div>
+        <div
+          class="relative px-5"
+        >
+          <div
+            class="bg-black opacity-10 absolute top-0 left-8 md:left-1/3 h-full w-px ml-3 md:ml-2"
+          />
+        </div>
+      </article>
       <article
         class="max-w-5xl mx-auto mb-16"
       >
