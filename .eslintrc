@@ -36,18 +36,24 @@
                 "groups": [
                     "builtin",
                     "external",
-                    ["internal", "unknown"],
+                    "internal",
+                    "unknown",
                     ["parent", "sibling", "index"],
                     "object"
                 ],
                 "pathGroups": [
-                    {
-                        "pattern": "react",
-                        "group": "external",
-                        "position": "before"
-                    }
+                    { "pattern": "react", "group": "external", "position": "before" },
+                    { "pattern": "{app,app/**}", "group": "unknown" },
+                    { "pattern": "{assets,assets/**}", "group": "unknown" },
+                    { "pattern": "{common,common/**}", "group": "unknown" },
+                    { "pattern": "{components,components/**}", "group": "unknown" },
+                    { "pattern": "{containers,containers/**}", "group": "unknown" },
+                    { "pattern": "{elements,elements/**}", "group": "unknown" },
+                    { "pattern": "{modules,modules/**}", "group": "unknown" },
+                    { "pattern": "{pages,pages/**}", "group": "unknown" },
+                    { "pattern": "{utils,utils/**}", "group": "unknown" }
                 ],
-                "pathGroupsExcludedImportTypes": ["builtin", "react"],
+                "pathGroupsExcludedImportTypes": ["builtin"],
                 "newlines-between": "always",
                 "alphabetize": {
                     "order": "asc",

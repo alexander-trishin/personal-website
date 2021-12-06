@@ -1,13 +1,13 @@
 import { MouseEventHandler, RefObject, useRef } from 'react';
 
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { About, Footer, Intro } from 'modules/personal/components';
 import { ContactController, ResumeController } from 'modules/personal/containers';
 import { GoTop } from 'modules/personal/elements';
 
 const Home = () => {
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const introRef = useRef<HTMLElement>(null);
     const aboutRef = useRef<HTMLElement>(null);
@@ -18,7 +18,7 @@ const Home = () => {
             event.currentTarget.blur();
 
             if (targetRef.current?.id) {
-                history.push(`#${targetRef.current.id}`);
+                navigate(`#${targetRef.current.id}`);
             }
 
             targetRef.current?.scrollIntoView({ behavior: 'smooth' });

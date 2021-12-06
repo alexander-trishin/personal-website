@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Environment, EnvironmentMode } from 'common/constants';
 import { Analytics } from 'containers';
@@ -29,9 +29,9 @@ const Application = () => {
             {Mode === EnvironmentMode.Production && <Analytics uri={Uri} id={Id} />}
             <BrowserRouter basename={PublicUrl}>
                 <Suspense fallback={<LoadingOverlay />}>
-                    <Switch>
-                        <Route component={PersonalModule} />
-                    </Switch>
+                    <Routes>
+                        <Route path="*" element={<PersonalModule />} />
+                    </Routes>
                 </Suspense>
             </BrowserRouter>
         </>

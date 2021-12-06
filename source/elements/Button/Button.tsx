@@ -49,7 +49,7 @@ const Button = forwardRef<PolymorphicButtonElement, PolymorphicButtonProps>((pro
         return (
             <Link
                 {...rest}
-                innerRef={ref as ForwardedRef<HTMLAnchorElement>}
+                ref={ref as ForwardedRef<HTMLAnchorElement>}
                 className={mergedClassName}
             >
                 {children}

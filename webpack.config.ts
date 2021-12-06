@@ -263,9 +263,13 @@ const createWebpackConfiguration = (): Configuration => {
             }
         },
         devServer: {
-            contentBase: paths.public,
-            contentBasePublicPath: paths.publicUrlOrPath,
-            publicPath: paths.publicUrlOrPath.slice(0, -1),
+            devMiddleware: {
+                publicPath: paths.publicUrlOrPath.slice(0, -1)
+            },
+            static: {
+                directory: paths.public,
+                publicPath: paths.publicUrlOrPath
+            },
             historyApiFallback: {
                 disableDotRule: true,
                 index: paths.publicUrlOrPath
