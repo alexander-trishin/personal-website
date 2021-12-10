@@ -27,7 +27,7 @@ const configuration = {
 
     moduleNameMapper: {
         '\\.(pcss)$': '<rootDir>/config/jest/styleMock.ts',
-        '\\.(jpg|jpeg|bmp|png|gif|svg)$': '<rootDir>/config/jest/fileMock.ts',
+        '\\.(jpg|jpeg|bmp|pdf|png|gif|svg)$': '<rootDir>/config/jest/fileMock.ts',
         ...getJestModuleNameMapper()
     },
 

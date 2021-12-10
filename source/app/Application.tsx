@@ -5,17 +5,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Environment, EnvironmentMode } from 'common/constants';
 import { Analytics } from 'containers';
 import { LoadingOverlay } from 'elements';
-import { sleep } from 'utils';
 
 import 'assets/styles/index.pcss';
 
-const PersonalModule = lazy(async () => {
-    await sleep(500);
-
-    const imported = await import('modules/personal');
-
-    return { default: imported.PersonalModule };
-});
+const PersonalModule = lazy(async () => import('modules/personal'));
 
 const Application = () => {
     const {

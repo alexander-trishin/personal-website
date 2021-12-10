@@ -7,11 +7,13 @@ import { Button, Typography } from 'elements';
 import AvatarSrc from '../../assets/images/avatar.jpg';
 
 interface AboutProps extends HTMLAttributes<HTMLElement> {
+    cvName?: string;
+    cvPath?: string;
     onContactMe?: MouseEventHandler<HTMLElement>;
 }
 
 const About = forwardRef<HTMLElement, AboutProps>((props, ref) => {
-    const { className, onContactMe, ...rest } = props;
+    const { className, cvName, cvPath, onContactMe, ...rest } = props;
 
     return (
         <section {...rest} ref={ref} className={clsx('bg-white pt-32 pb-36', className)}>
@@ -34,7 +36,7 @@ const About = forwardRef<HTMLElement, AboutProps>((props, ref) => {
                         Hi, I&apos;m Alex. I am a software engineer, currently living in Minsk,
                         Belarus. I like building things and learn something new every day. In my
                         free time I like: read, travel, swim, listen to music and play electric
-                        guitar. I am currently mainly focused on building this website.
+                        guitar.
                     </Typography>
                 </div>
             </div>
@@ -54,6 +56,16 @@ const About = forwardRef<HTMLElement, AboutProps>((props, ref) => {
                 >
                     Contact Me
                 </Button>
+                {cvName && cvPath && (
+                    <Button
+                        variant="contained"
+                        className="text-white bg-gray-800 focus:bg-gray-800 hover:bg-gray-800"
+                        download={cvName}
+                        to={cvPath}
+                    >
+                        Download CV
+                    </Button>
+                )}
             </div>
         </section>
     );

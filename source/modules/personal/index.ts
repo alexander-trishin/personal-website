@@ -1,1 +1,1 @@
-export { Routes as PersonalModule } from './pages';
+export { default } from './pages';

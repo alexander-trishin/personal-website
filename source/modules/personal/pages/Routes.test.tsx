@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { Routes } from '.';
+import Routes from './Routes';
 
 jest.mock('./Home', () => () => <div data-testid="home" />);
 

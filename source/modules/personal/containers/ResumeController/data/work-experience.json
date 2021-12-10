@@ -7,7 +7,7 @@
         "projects": [
             {
                 "description": "An electronic platform for ordering books.",
-                "participation": "Led a team of 4 developers. Implemented 12 microservices. Created reverse-proxy service using Yarp. Implemented swagger generation library for Yarp which was used by other teams. Was responsible for making technical decisions. Performed knowledge transfer.",
+                "participation": "Led a team of 4 developers. Designed and developed 12 microservices. Developed and maintained the swagger generation library for the reverse proxy server, which was used by multiple teams. During all the development cycle was responsible for making technical decisions.",
                 "technologies": [
                     ".Net Core",
                     "Asp.Net Core",
@@ -29,13 +29,13 @@
                     "X-Ray)",
                     "Git",
                     "GitHub",
-                    "Yenkins",
+                    "Jenkins",
                     "Rally"
                 ]
             },
             {
-                "description": "Portal for the analysis of insurance submissions.",
-                "participation": "Participated in all stages of software production. Researched and introduced new technologies to the team. Improved a general quality of code style by ESLint tuning and Prettier integration. Coordinated a distributed team. Conducted demo sessions. Configured CI/CD pipeline. Created and maintained documentation.",
+                "description": "Portal for analysis of insurance claims.",
+                "participation": "Led a distributed team of 3 front-end developers, 1 devops and 1 QA engineer. Researched and introduced new technologies to the team. ⁣Developed and maintained 2 SPA projects. Helped the team with designing and developing REST APIs and GraphQL endpoints. Conducted demo sessions. Configured CI/CD pipelines. Created and maintained documentation.",
                 "technologies": [
                     "React.js",
                     "Next.js",
@@ -67,8 +67,8 @@
                 ]
             },
             {
-                "description": "Responsive web application for receiving alerts from multiple weather feeds.",
-                "participation": "Designed and implemented 3 micro-services using .Net stack. Implemented voice and push notifications for mobile version. Made a huge contribution to the development of 3 UI modules: subscription to weather events, configuration of alert notifications, reports and analysis. Developed and maintained shared technical frontend stack used across the project. Was responsible for technical and architectural decisions affecting multiple teams. Upgraded 5 legacy projects to the latest stack. Troubleshooted production issues. Conducted technical interviews. Performed on-boarding of the new team members.",
+                "description": "Responsive web application for receiving weather alerts.",
+                "participation": "Designed and implemented 3 microservices using .Net stack. Implemented voice and push notifications for mobile version. Made a huge contribution to the development of 3 UI modules: subscription to weather events, configuration of alert notifications, reports and analysis. Developed and maintained a shared technical frontend stack used across the company. Upgraded 5 legacy projects to the latest stack. Troubleshooted production issues. Conducted technical interviews. Performed on-boarding of the new team members.",
                 "technologies": [
                     ".Net Core",
                     "Asp.Net Core",

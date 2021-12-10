@@ -6,7 +6,7 @@
         "faculty": "Computational And Applied Mathematics",
         "department": "Programming",
         "speciality": "Software Engineering",
-        "degree": "Master Degree"
+        "degree": "Master"
     },
     {
         "startDate": "2009-09-01",
@@ -15,6 +15,6 @@
         "faculty": "Automatization and Information Technologies in Management",
         "department": "Information Measuring and Biomedical Engineering",
         "speciality": "Information Measuring Systems and Technologies",
-        "degree": "Specialist Degree"
+        "degree": "Specialist"
     }
 ]

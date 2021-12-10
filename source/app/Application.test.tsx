@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 
 import { Application } from '.';
 
@@ -15,33 +15,28 @@ jest.mock('containers', () => ({
 }));
 
 jest.mock('modules/personal', () => ({
-    PersonalModule: () => <div data-testid="personal" />
+    __esModule: true,
+    default: () => <div data-testid="personal" />
 }));
 
 describe('<Application />', () => {
-    beforeEach(() => {
-        jest.useFakeTimers();
-    });
-
-    afterEach(() => {
-        jest.useRealTimers();
-    });
-
-    it('should use analytics in production mode', () => {
+    it('should use analytics in production mode', async () => {
         const wrapper = render(<Application />);
 
-        jest.advanceTimersByTime(1000);
-        const actual = wrapper.getByTestId('analytics');
+        await waitFor(() => {
+            const actual = wrapper.getByTestId('analytics');
 
-        expect(actual).toBeDefined();
+            expect(actual).toBeDefined();
+        });
     });
 
-    it('should render personal module', () => {
+    it('should render personal module', async () => {
         const wrapper = render(<Application />);
 
-        jest.advanceTimersByTime(1000);
-        const actual = wrapper.getByTestId('personal');
+        await waitFor(() => {
+            const actual = wrapper.getByTestId('personal');
 
-        expect(actual).toBeDefined();
+            expect(actual).toBeDefined();
+        });
     });
 });

@@ -29,7 +29,7 @@ const Resume = forwardRef<HTMLElement, ResumeProps>((props, ref) => {
                 </Typography>
 
                 <Typography className="text-gray-500" variant="subtitle">
-                    Later this section will be available for download :)
+                    This section is also available for download :)
                 </Typography>
             </div>
 
