@@ -51,7 +51,7 @@ const GoTop: FC<GoTopProps> = props => {
                 onClick={onGoTop}
                 className={clsx(
                     'flex justify-center items-center',
-                    'text-white bg-primary focus:bg-gray-800 hover:bg-gray-800 h-14 w-14'
+                    'text-white bg-primary focus:bg-neutral-800 hover:bg-neutral-800 h-14 w-14'
                 )}
                 title="Go to top"
             >

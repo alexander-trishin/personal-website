@@ -27,7 +27,7 @@ const TextFieldWrapper: FC<TextFieldWrapperProps> = props => {
                     htmlFor={htmlFor}
                     className={clsx(
                         'absolute left-4 pointer-events-none',
-                        'text-base leading-none text-gray-700',
+                        'text-base leading-none text-neutral-700',
                         'transform origin-top-left',
                         'transition duration-200',
                         {

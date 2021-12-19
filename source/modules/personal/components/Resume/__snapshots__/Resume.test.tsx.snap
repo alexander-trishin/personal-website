@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <section
-        class="bg-gray-100 py-32"
+        class="bg-neutral-100 py-32"
       >
         <div
           class="text-center max-w-2xl mx-auto px-5 mb-8"
@@ -17,12 +17,12 @@ Object {
             Resume
           </h5>
           <h1
-            class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-gray-800"
+            class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-neutral-800"
           >
             More of my credentials.
           </h1>
           <h6
-            class="min-h-0vw text-2xl-fluid text-gray-500"
+            class="min-h-0vw text-2xl-fluid text-neutral-500"
           >
             This section is also available for download :)
           </h6>
@@ -72,7 +72,7 @@ Object {
   </body>,
   "container": <div>
     <section
-      class="bg-gray-100 py-32"
+      class="bg-neutral-100 py-32"
     >
       <div
         class="text-center max-w-2xl mx-auto px-5 mb-8"
@@ -83,12 +83,12 @@ Object {
           Resume
         </h5>
         <h1
-          class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-gray-800"
+          class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-neutral-800"
         >
           More of my credentials.
         </h1>
         <h6
-          class="min-h-0vw text-2xl-fluid text-gray-500"
+          class="min-h-0vw text-2xl-fluid text-neutral-500"
         >
           This section is also available for download :)
         </h6>

@@ -6,8 +6,6 @@ const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').
 const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
 
-delete colors.lightBlue;
-
 const fontFluidMinViewport = 400;
 const fontFluidMaxViewport = 1000;
 
@@ -29,9 +27,7 @@ const fontClamp = (
 };
 
 module.exports = {
-    mode: 'jit',
-    purge: ['./source/**/*.tsx', './public/index.html'],
-    darkMode: false,
+    content: ['./source/**/*.tsx', './public/index.html'],
     theme: {
         container: {
             padding: {
@@ -46,13 +42,14 @@ module.exports = {
                 3: '3px'
             },
             colors: {
-                ...colors,
                 current: 'currentColor',
                 transparent: 'transparent',
-                primary: '#9C84EE'
+                primary: '#9C84EE',
+                green: colors.emerald,
+                yellow: colors.amber,
+                purple: colors.violet
             },
             fontFamily: {
-                lora: ['Lora', 'serif'],
                 poppins: ['Poppins', 'sans-serif']
             },
             fontSize: {

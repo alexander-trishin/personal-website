@@ -19,16 +19,16 @@ const Resume = forwardRef<HTMLElement, ResumeProps>((props, ref) => {
     const { className, education, workExperience, ...rest } = props;
 
     return (
-        <section {...rest} ref={ref} className={clsx('bg-gray-100 py-32', className)}>
+        <section {...rest} ref={ref} className={clsx('bg-neutral-100 py-32', className)}>
             <div className="text-center max-w-2xl mx-auto px-5 mb-8">
                 <Typography className="text-primary uppercase" variant="h5">
                     Resume
                 </Typography>
-                <Typography className="text-gray-800" variant="h1">
+                <Typography className="text-neutral-800" variant="h1">
                     More of my credentials.
                 </Typography>
 
-                <Typography className="text-gray-500" variant="subtitle">
+                <Typography className="text-neutral-500" variant="subtitle">
                     This section is also available for download :)
                 </Typography>
             </div>

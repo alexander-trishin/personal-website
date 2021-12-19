@@ -25,8 +25,8 @@ const ResumeBlockListItem: FC<ResumeBlockListItemProps> = props => {
 
     return (
         <li {...rest}>
-            {header && <strong className="text-gray-500 capitalize">{header}: </strong>}
-            <span className="text-gray-500">{children}</span>
+            {header && <strong className="text-neutral-500 capitalize">{header}: </strong>}
+            <span className="text-neutral-500">{children}</span>
         </li>
     );
 };

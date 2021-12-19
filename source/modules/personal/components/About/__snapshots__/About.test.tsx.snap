@@ -17,7 +17,7 @@ Object {
             About
           </h5>
           <h1
-            class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-gray-800 mb-10 md:mb-3"
+            class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-neutral-800 mb-10 md:mb-3"
           >
             Let me introduce myself.
           </h1>
@@ -62,7 +62,7 @@ Object {
           About
         </h5>
         <h1
-          class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-gray-800 mb-10 md:mb-3"
+          class="min-h-0vw text-6xl-fluid font-poppins font-bold normal-case text-neutral-800 mb-10 md:mb-3"
         >
           Let me introduce myself.
         </h1>

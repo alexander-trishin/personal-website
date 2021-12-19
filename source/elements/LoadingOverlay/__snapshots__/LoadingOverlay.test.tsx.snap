@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="bg-gray-900 fixed top-0 left-0 h-full w-full z-100 pointer-events-none select-none"
+        class="bg-neutral-900 fixed top-0 left-0 h-full w-full z-100 pointer-events-none select-none"
       >
         <div
           class="text-primary fixed inset-1/2 h-16 w-16 -mt-8 -ml-8"
@@ -20,7 +20,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="bg-gray-900 fixed top-0 left-0 h-full w-full z-100 pointer-events-none select-none"
+      class="bg-neutral-900 fixed top-0 left-0 h-full w-full z-100 pointer-events-none select-none"
     >
       <div
         class="text-primary fixed inset-1/2 h-16 w-16 -mt-8 -ml-8"

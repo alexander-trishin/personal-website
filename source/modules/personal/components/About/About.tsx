@@ -21,7 +21,7 @@ const About = forwardRef<HTMLElement, AboutProps>((props, ref) => {
                 <Typography className="text-primary mb-1" variant="h5">
                     About
                 </Typography>
-                <Typography className="text-gray-800 mb-10 md:mb-3" variant="h1">
+                <Typography className="text-neutral-800 mb-10 md:mb-3" variant="h1">
                     Let me introduce myself.
                 </Typography>
 
@@ -59,7 +59,7 @@ const About = forwardRef<HTMLElement, AboutProps>((props, ref) => {
                 {cvName && cvPath && (
                     <Button
                         variant="contained"
-                        className="text-white bg-gray-800 focus:bg-gray-800 hover:bg-gray-800"
+                        className="text-white bg-neutral-800 focus:bg-neutral-800 hover:bg-neutral-800"
                         download={cvName}
                         to={cvPath}
                     >

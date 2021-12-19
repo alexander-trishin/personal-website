@@ -47,7 +47,7 @@ Object {
                   value=""
                 />
                 <label
-                  class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                  class="absolute left-4 pointer-events-none text-base leading-none text-neutral-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
                   for="name"
                 >
                   Name
@@ -64,7 +64,7 @@ Object {
                   value=""
                 />
                 <label
-                  class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                  class="absolute left-4 pointer-events-none text-base leading-none text-neutral-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
                   for="email"
                 >
                   Email
@@ -81,7 +81,7 @@ Object {
                   value=""
                 />
                 <label
-                  class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                  class="absolute left-4 pointer-events-none text-base leading-none text-neutral-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
                   for="subject"
                 >
                   Subject
@@ -98,7 +98,7 @@ Object {
                   rows="10"
                 />
                 <label
-                  class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                  class="absolute left-4 pointer-events-none text-base leading-none text-neutral-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
                   for="message"
                 >
                   Message
@@ -166,7 +166,7 @@ Object {
                 value=""
               />
               <label
-                class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                class="absolute left-4 pointer-events-none text-base leading-none text-neutral-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
                 for="name"
               >
                 Name
@@ -183,7 +183,7 @@ Object {
                 value=""
               />
               <label
-                class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                class="absolute left-4 pointer-events-none text-base leading-none text-neutral-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
                 for="email"
               >
                 Email
@@ -200,7 +200,7 @@ Object {
                 value=""
               />
               <label
-                class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                class="absolute left-4 pointer-events-none text-base leading-none text-neutral-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
                 for="subject"
               >
                 Subject
@@ -217,7 +217,7 @@ Object {
                 rows="10"
               />
               <label
-                class="absolute left-4 pointer-events-none text-base leading-none text-gray-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
+                class="absolute left-4 pointer-events-none text-base leading-none text-neutral-700 transform origin-top-left transition duration-200 translate-y-6 scale-100"
                 for="message"
               >
                 Message

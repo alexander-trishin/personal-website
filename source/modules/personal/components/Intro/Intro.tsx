@@ -1,11 +1,12 @@
-import { HTMLAttributes, MouseEventHandler, forwardRef } from 'react';
+import { HTMLAttributes, MouseEventHandler, forwardRef, useEffect, useRef, useState } from 'react';
 
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 
-import { Button, Typography } from 'elements';
+import { Button, LoadingOverlay, Typography } from 'elements';
 import { Social } from 'modules/personal/elements';
+import mergeRefs from 'utils/mergeRefs';
 
 import './Intro.pcss';
 interface IntroProps extends HTMLAttributes<HTMLElement> {
@@ -15,16 +16,32 @@ interface IntroProps extends HTMLAttributes<HTMLElement> {
 const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
     const { className, onShowMore, ...rest } = props;
 
+    const sectionRef = useRef<HTMLElement>(null);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const { backgroundImage } = getComputedStyle(sectionRef.current as HTMLElement);
+        const [src] = /http.+?(?='|")/.exec(backgroundImage) || [];
+
+        if (src) {
+            const image = new Image();
+
+            image.src = src;
+            image.onload = () => setIsLoading(false);
+        }
+    }, []);
+
     return (
         <section
             {...rest}
-            ref={ref}
+            ref={mergeRefs(ref, sectionRef)}
             className={clsx(
                 'relative flex justify-center items-center min-h-lg h-full w-full',
                 className
             )}
         >
-            <div className="absolute left-0 top-0 h-full w-full bg-gray-900 opacity-80"></div>
+            {isLoading && <LoadingOverlay />}
+            <div className="absolute left-0 top-0 h-full w-full bg-neutral-900 opacity-80"></div>
 
             <div className="text-center z-10">
                 <div className="mx-auto max-w-6xl">
