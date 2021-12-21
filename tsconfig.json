@@ -22,6 +22,7 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
+        "incremental": true,
         "noEmit": true,
         "noImplicitAny": true,
         "noImplicitThis": true,

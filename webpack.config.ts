@@ -5,7 +5,12 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import InterpolateHtmlWebpackPlugin from 'interpolate-html-plugin';
 import LodashWebpackPlugin from 'lodash-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { DefinePlugin, EntryObject, Configuration as WebpackConfiguration } from 'webpack';
+import {
+    DefinePlugin,
+    EntryObject,
+    Configuration as WebpackConfiguration,
+    WebpackPluginInstance
+} from 'webpack';
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 import { WebpackManifestPlugin as ManifestWebpackPlugin } from 'webpack-manifest-plugin';
 
@@ -30,7 +35,7 @@ const createWebpackConfiguration = (): Configuration => {
         bail: isProduction,
         mode: isProduction ? 'production' : 'development',
         target: isProduction ? 'browserslist' : 'web',
-        devtool: !isProduction && 'eval',
+        devtool: isProduction ? 'source-map' : 'eval',
         entry: {
             main: [paths.indexTsx]
         },
@@ -134,7 +139,7 @@ const createWebpackConfiguration = (): Configuration => {
             ]
         },
         plugins: [
-            new LodashWebpackPlugin(),
+            new LodashWebpackPlugin() as WebpackPluginInstance,
             new HtmlWebpackPlugin({
                 inject: true,
                 template: paths.indexHtml,
@@ -174,7 +179,7 @@ const createWebpackConfiguration = (): Configuration => {
                     const manifestFiles = files.reduce(
                         (manifest, file) => ({
                             ...manifest,
-                            [file.name as string]: file.path
+                            [file.name]: file.path
                         }),
                         seed
                     );
@@ -186,7 +191,8 @@ const createWebpackConfiguration = (): Configuration => {
                     return {
                         files: manifestFiles,
                         entrypoints: entrypointFiles
-                    };
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    } as Record<string, any>;
                 }
             }),
             ...(isProduction
@@ -205,8 +211,7 @@ const createWebpackConfiguration = (): Configuration => {
                                   }
                               }
                           ]
-                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                      }) as any,
+                      }),
                       new CompressionWebpackPlugin({
                           algorithm: 'brotliCompress',
                           filename: '[path][base].br[query]',
