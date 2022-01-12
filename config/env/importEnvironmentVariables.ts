@@ -1,7 +1,7 @@
 import fs from 'fs';
 
 import dotenv from 'dotenv';
-import dotenvExpand from 'dotenv-expand';
+import { expand } from 'dotenv-expand';
 
 import paths from './paths';
 
@@ -15,7 +15,7 @@ const importEnvironmentVariables = () => {
         paths.dotenv
     ].forEach(dotenvFile => {
         if (dotenvFile && fs.existsSync(dotenvFile)) {
-            dotenvExpand(dotenv.config({ path: dotenvFile }));
+            expand(dotenv.config({ path: dotenvFile }));
         }
     });
 };
