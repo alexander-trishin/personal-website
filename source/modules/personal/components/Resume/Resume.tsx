@@ -9,6 +9,7 @@ import ResumeArticle from './ResumeArticle';
 import ResumeBlock from './ResumeBlock';
 import ResumeBlockList from './ResumeBlockList';
 import type { IEducation, IWorkExperience } from './ResumeTypes';
+import Truncate from './Truncate';
 
 interface ResumeProps extends HTMLAttributes<HTMLElement> {
     education: IEducation[];
@@ -52,10 +53,10 @@ const Resume = forwardRef<HTMLElement, ResumeProps>((props, ref) => {
                                     return (
                                         <Fragment key={description}>
                                             <ResumeBlockList.Item header="Project">
-                                                {description}
+                                                <Truncate>{description}</Truncate>
                                             </ResumeBlockList.Item>
                                             <ResumeBlockList.Item header="Participation">
-                                                {participation}
+                                                <Truncate>{participation}</Truncate>
                                             </ResumeBlockList.Item>
                                             <ResumeBlockList.Item
                                                 header="Technologies/Tools"
@@ -63,7 +64,7 @@ const Resume = forwardRef<HTMLElement, ResumeProps>((props, ref) => {
                                                     'mb-8': projectIndex !== projects.length - 1
                                                 })}
                                             >
-                                                {technologies.join(', ')}
+                                                <Truncate>{technologies.join(', ')}</Truncate>
                                             </ResumeBlockList.Item>
                                         </Fragment>
                                     );
