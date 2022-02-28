@@ -16,11 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: Setup Yarn
-        run: npm install yarn -g
+          cache: "yarn" # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-dependencies
       - name: Restore packages
         run: yarn
       - name: Run linter
