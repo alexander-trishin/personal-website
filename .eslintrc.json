@@ -1,0 +1,49 @@
+{
+    "extends": ["next/core-web-vitals", "prettier"],
+    "plugins": ["simple-import-sort", "jest", "testing-library"],
+    "rules": {
+        "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": [
+                    // Node.js builtins prefixed with `node:`.
+                    ["^node:"],
+                    // Package imports.
+                    // `react` related packages come first.
+                    // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+                    ["^react", "^@?\\w"],
+                    // Absolute imports and other imports such as `@/foo`. Anything not matched in another group.
+                    ["^"],
+                    // Parent imports.
+                    ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+                    // Relative imports.
+                    ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+                    // Side effect imports.
+                    ["^\\u0000"],
+                    // Style imports.
+                    ["^.+\\.s?css$"]
+                ]
+            }
+        ],
+        "simple-import-sort/exports": "error",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error"
+    },
+    "overrides": [
+        {
+            "files": ["./src/**/?(*.)+(spec|test).ts?(x)"],
+            "extends": ["plugin:jest/recommended", "plugin:testing-library/react"]
+        },
+        {
+            "files": "./tests/e2e/**",
+            "extends": "plugin:playwright/recommended"
+        }
+    ],
+    "settings": {
+        "jsx-a11y": {
+            "polymorphicPropName": "component"
+        }
+    }
+}

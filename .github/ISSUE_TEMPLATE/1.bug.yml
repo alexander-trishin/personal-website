@@ -1,0 +1,54 @@
+name: Bug report 🐛
+description: Create a bug report.
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for contributing by creating an issue! ❤️ Please provide a searchable summary of the issue in the title above ⬆️.
+  - type: checkboxes
+    attributes:
+      label: Latest version
+      description: We roll bug fixes, performance enhancements, and other improvements into new releases.
+      options:
+        - label: I have tested the latest version
+          required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: |
+        **⚠️ Issues that we can't reproduce can't be fixed.**
+
+        Please provide an unambiguous set of steps to reproduce this bug.
+      value: |
+        Steps:
+        1.
+        2.
+        3.
+  - type: textarea
+    attributes:
+      label: Current behavior
+      description: Describe what happens instead of the expected behavior.
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: Describe what should happen.
+  - type: textarea
+    attributes:
+      label: Context
+      description: What are you trying to accomplish? Providing context helps us come up with a solution that is more useful in the real world.
+  - type: textarea
+    attributes:
+      label: Your environment
+      description: If you encounter issues with TypeScript please include the used tsconfig.
+      value: |
+        System:
+          OS: 
+        Binaries:
+          Node:
+          npm:
+        Browsers:
+          Chrome:
+          Firefox:
+        npmPackages:
+          ...

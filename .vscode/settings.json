@@ -1,0 +1,19 @@
+{
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": ["typescript", "typescriptreact"],
+    "cssVariables.lookupFiles": [
+        "**/*.css",
+        "**/*.scss",
+        "**/*.sass",
+        "**/*.less",
+        "node_modules/@mantine/core/styles.css"
+    ],
+    "i18n-ally.localesPaths": ["./src/server/i18n/translations"],
+    "i18n-ally.sourceLanguage": "ru",
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.indent": 4
+}

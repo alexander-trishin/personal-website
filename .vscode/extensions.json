@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "naumovs.color-highlight",
+        "vunguyentuan.vscode-css-variables",
+        "dbaeumer.vscode-eslint",
+        "github.vscode-github-actions",
+        "eamodio.gitlens",
+        "lokalise.i18n-ally",
+        "PKief.material-icon-theme",
+        "ms-playwright.playwright",
+        "esbenp.prettier-vscode",
+        "DavidAnson.vscode-markdownlint"
+    ]
+}

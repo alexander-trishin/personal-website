@@ -1,0 +1,70 @@
+name: Deploy storybook
+
+on:
+  workflow_run:
+    workflows:
+      - Run tests
+    branches:
+      - main
+    types:
+      - completed
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build storybook
+
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Cache npm build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]sx?', '!**.test.[jt]sx?') }}
+          restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
+      - name: Install npm dependencies
+        run: npm ci --cache .npm --prefer-offline
+
+      - name: Build storybook
+        run: npm run storybook:build
+
+      - name: Upload storybook artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: storybook-static
+
+  deploy:
+    name: Delpoy to GitHub Pages
+    needs: build
+
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

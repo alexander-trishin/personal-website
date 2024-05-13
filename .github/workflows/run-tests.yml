@@ -1,0 +1,131 @@
+name: Run tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  run-unit-tests:
+    name: Run tests / unit
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Cache npm build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]sx?', '!**.test.[jt]sx?') }}
+          restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
+      - name: Install npm dependencies
+        run: npm ci --cache .npm --prefer-offline
+
+      - name: Run tests
+        run: npm run test
+
+  run-e2e-tests:
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest, macos-latest] # Windows tests are supported, but they run too slow
+        #os: [ubuntu-latest, macos-latest, windows-latest]
+        include:
+          - os: ubuntu-latest
+            playwright-cache-folder: "~/.cache/ms-playwright"
+          - os: macos-latest
+            playwright-cache-folder: "~/Library/Caches/ms-playwright"
+    #     - os: windows-latest
+    #       playwright-cache-folder: '%USERPROFILE%\AppData\Local\ms-playwright'
+
+    name: Run tests / e2e / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Cache npm build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]sx?', '!**.test.[jt]sx?') }}
+          restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
+      - name: Get playwright version
+        id: playwright-version
+        uses: actions/github-script@v7
+        with:
+          script: >
+            const fs = require('fs');
+            const util = require('util');
+            const packageJsonBuffer = await util.promisify(fs.readFile)('package.json');
+            const packageJson = JSON.parse(packageJsonBuffer.toString());
+            return packageJson.devDependencies['@playwright/test'];
+          result-encoding: string
+
+      - name: Cache playwright binaries
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ${{ matrix.playwright-cache-folder }}
+          key: ${{ runner.os }}-playwright-${{ steps.playwright-version.outputs.result }}
+          restore-keys: ${{ runner.os }}-playwright-
+
+      - name: Install npm dependencies
+        run: npm ci --cache .npm --prefer-offline
+
+      - name: Install playwright dependencies
+        run: npx playwright install --with-deps
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+
+      - name: Install playwright dependencies (runtime only)
+        run: npx playwright install-deps
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+
+      - name: Run type check
+        run: npm run typecheck
+
+      - name: Run lint check
+        run: npm run lint
+
+      - name: Run npm build
+        run: npm run build
+
+      - name: Run playwright tests
+        run: npm run test:e2e
+
+      - name: Upload playwright artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/${{ matrix.os }}/
+          retention-days: 3

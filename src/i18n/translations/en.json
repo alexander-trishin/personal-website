@@ -1,0 +1,32 @@
+{
+    "components": {
+        "color-scheme-toggle": {
+            "dark": "Dark mode",
+            "light": "Light mode"
+        },
+        "locale-select": {
+            "change-locale": "Select language",
+            "en": "English",
+            "ru": "Russian"
+        }
+    },
+    "pages": {
+        "error": {
+            "heading": "Something bad just happened...",
+            "description": "Our servers could not handle your request. Don't worry, our development team was already notified. Try refreshing the page.",
+            "refresh": "Refresh"
+        },
+        "home": {
+            "welcome": "Welcome to my home page!"
+        },
+        "not-found": {
+            "heading": "You have found a secret place.",
+            "description": "Unfortunately, this is only a 404 page. You may have mistyped the address, or the page has been moved to another URL.",
+            "go-home": "Take me back to home page"
+        }
+    },
+    "metadata": {
+        "author": "Alexander Trishin",
+        "description": "A personal website by Alexander Trishin"
+    }
+}

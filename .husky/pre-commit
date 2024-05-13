@@ -1,0 +1,3 @@
+npm run typecheck
+npm run lint -- --fix --max-warnings=0
+npm run prettify -- --loglevel warn

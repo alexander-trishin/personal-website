@@ -1,0 +1,45 @@
+.primary {
+    fill: var(--mantine-primary-color-6);
+}
+
+.fill-gray-5 {
+    fill: var(--mantine-color-gray-5);
+}
+
+.fill-gray-8 {
+    fill: var(--mantine-color-gray-8);
+}
+
+.fill-dark-6-gray-1 {
+    @mixin dark {
+        fill: var(--mantine-color-dark-6);
+    }
+
+    @mixin light {
+        fill: var(--mantine-color-gray-1);
+    }
+}
+
+.fill-dark-8-gray-3 {
+    @mixin dark {
+        fill: var(--mantine-color-dark-8);
+    }
+
+    @mixin light {
+        fill: var(--mantine-color-gray-3);
+    }
+}
+
+.fill-black-or-white {
+    @mixin dark {
+        fill: var(--mantine-color-dark-7);
+    }
+
+    @mixin light {
+        fill: var(--mantine-color-white);
+    }
+}
+
+.stroke-gray-8 {
+    stroke: var(--mantine-color-gray-8);
+}

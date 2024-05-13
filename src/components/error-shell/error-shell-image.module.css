@@ -1,0 +1,8 @@
+.root {
+    max-width: rem(500px);
+    width: 100%;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        max-width: rem(400px);
+    }
+}
