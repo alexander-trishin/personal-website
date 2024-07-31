@@ -32,7 +32,7 @@ const config = defineConfig({
 
     webServer: {
         cwd: '..',
-        command: `npm run start -- -p ${port}`,
+        command: `yarn start -p ${port}`,
         port,
         reuseExistingServer: isDev
     },

@@ -15,5 +15,13 @@
     "i18n-ally.localesPaths": ["./src/server/i18n/translations"],
     "i18n-ally.sourceLanguage": "ru",
     "i18n-ally.keystyle": "nested",
-    "i18n-ally.indent": 4
+    "i18n-ally.indent": 4,
+    "search.exclude": {
+        "**/.yarn": true,
+        "**/.pnp.*": true
+    },
+    "eslint.nodePath": ".yarn/sdks",
+    "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+    "typescript.tsdk": ".yarn/sdks/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
 }
