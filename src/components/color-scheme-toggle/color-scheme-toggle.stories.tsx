@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ColorSchemeToggle } from '.';
+import { ColorSchemeToggle } from './color-scheme-toggle';
 
 const meta: Meta<typeof ColorSchemeToggle> = {
     title: 'Color Scheme Toggle',

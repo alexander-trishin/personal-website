@@ -1,5 +1,5 @@
 import { Center, Group, Stack, Title } from '@mantine/core';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 
 import type { AppPageProps } from '@/app/types';
 import { ColorSchemeToggle } from '@/components/color-scheme-toggle';
@@ -9,8 +9,6 @@ const HomePage = async (props: AppPageProps) => {
     const {
         params: { locale }
     } = props;
-
-    unstable_setRequestLocale(locale);
 
     const t = await getTranslations({ locale, namespace: 'pages.home' });
 

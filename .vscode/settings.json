@@ -4,7 +4,6 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
-    "eslint.validate": ["typescript", "typescriptreact"],
     "cssVariables.lookupFiles": [
         "**/*.css",
         "**/*.scss",
@@ -12,8 +11,18 @@
         "**/*.less",
         "node_modules/@mantine/core/styles.css"
     ],
-    "i18n-ally.localesPaths": ["./src/server/i18n/translations"],
+    "i18n-ally.enabledFrameworks": ["next-intl", "react", "vscode"],
+    "i18n-ally.localesPaths": ["src/i18n/locales"],
     "i18n-ally.sourceLanguage": "ru",
     "i18n-ally.keystyle": "nested",
-    "i18n-ally.indent": 4
+    "i18n-ally.indent": 4,
+    "search.exclude": {
+        "**/.yarn": true,
+        "**/.pnp.*": true
+    },
+    "eslint.nodePath": ".yarn/sdks",
+    "eslint.validate": ["typescript", "typescriptreact"],
+    "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+    "typescript.tsdk": ".yarn/sdks/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
 }

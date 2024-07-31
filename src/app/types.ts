@@ -1,4 +1,6 @@
-export interface AppParams {
+import type { ReactNode } from 'react';
+
+interface AppParams {
     locale: Locale;
 }
 
@@ -6,8 +8,10 @@ interface AppPropsWithParams {
     params: AppParams;
 }
 
-export interface AppLayoutProps extends AppPropsWithParams {
-    children: React.ReactNode;
+interface AppLayoutProps extends AppPropsWithParams {
+    children: ReactNode;
 }
 
-export interface AppPageProps extends AppPropsWithParams {}
+interface AppPageProps extends AppPropsWithParams {}
+
+export type { AppLayoutProps, AppPageProps, AppParams };

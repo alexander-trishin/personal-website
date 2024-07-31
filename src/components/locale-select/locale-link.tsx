@@ -3,12 +3,12 @@ import { ActionIcon, ActionIconProps } from '@mantine/core';
 
 import { Link } from '@/router';
 
-interface CountryLinkProps extends Omit<ActionIconProps, 'component' | 'variant'> {
+type LocaleLinkProps = Omit<ActionIconProps, 'component' | 'variant'> & {
     href: string;
     locale: Locale;
-}
+};
 
-const MenuLink = forwardRef<HTMLAnchorElement, CountryLinkProps>((props, ref) => {
+const LocaleLink = forwardRef<HTMLAnchorElement, LocaleLinkProps>((props, ref) => {
     const { children, ...rest } = props;
 
     return (
@@ -18,6 +18,6 @@ const MenuLink = forwardRef<HTMLAnchorElement, CountryLinkProps>((props, ref) =>
     );
 });
 
-MenuLink.displayName = 'MenuLink';
+LocaleLink.displayName = 'LocaleLink';
 
-export { MenuLink };
+export { LocaleLink };

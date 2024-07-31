@@ -11,6 +11,6 @@ const nextConfig = {
 };
 
 const withNextBundleAnalyzer = createNextBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' });
-const withNextIntl = createNextIntlPlugin('./src/i18n/next-intl-provider.ts');
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 export default withNextBundleAnalyzer(withNextIntl(nextConfig));

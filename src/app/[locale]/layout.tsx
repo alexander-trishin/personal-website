@@ -1,15 +1,15 @@
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 
 import type { AppLayoutProps } from '@/app/types';
+import { locales } from '@/i18n/config';
 import { theme } from '@/theme';
 
 import '@mantine/core/styles.css';
 
-export { generateMetadata } from './layout-metadata';
-export { generateStaticParams } from './layout-params';
-export { viewport } from './layout-viewport';
+export { generateMetadata, generateStaticParams, viewport } from './_components/layout';
 
 const RootLayout = async (props: AppLayoutProps) => {
     const {
@@ -17,7 +17,9 @@ const RootLayout = async (props: AppLayoutProps) => {
         params: { locale }
     } = props;
 
-    unstable_setRequestLocale(locale);
+    if (!locales.includes(locale)) {
+        notFound();
+    }
 
     const messages = await getMessages();
 

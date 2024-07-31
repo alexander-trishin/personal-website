@@ -18,7 +18,7 @@ My personal website. Built using:
 - [Playwright](https://playwright.dev/)
 - [Storybook](https://storybook.js.org/) deployed to [GitHub Pages](https://alexander-trishin.github.io/personal-website/)
 
-## npm scripts
+## Scripts
 
 ### Build and dev scripts
 

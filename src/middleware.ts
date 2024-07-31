@@ -1,9 +1,9 @@
 import createNextIntlMiddleware from 'next-intl/middleware';
 
-import { nextIntlConfig } from '@/i18n/next-intl-config';
+import { routing } from '@/i18n/routing';
 import { compose } from '@/middleware/compose';
 
-const withNextIntl = createNextIntlMiddleware(nextIntlConfig);
+const withNextIntl = createNextIntlMiddleware(routing);
 
 const middleware = compose(withNextIntl);
 

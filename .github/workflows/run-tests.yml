@@ -24,25 +24,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Enable corepack
+        run: corepack enable
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
+          cache: "yarn"
 
-      - name: Cache npm build
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]sx?', '!**.test.[jt]sx?') }}
-          restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-
-      - name: Install npm dependencies
-        run: npm ci --cache .npm --prefer-offline
+      - name: Install dependencies
+        run: yarn --immutable
 
       - name: Run tests
-        run: npm run test
+        run: yarn test
 
   run-e2e-tests:
     strategy:
@@ -65,62 +60,49 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Enable corepack
+        run: corepack enable
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
+          cache: "yarn"
 
-      - name: Cache npm build
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]sx?', '!**.test.[jt]sx?') }}
-          restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-
-      - name: Get playwright version
+      - name: Get playwright version json
         id: playwright-version
-        uses: actions/github-script@v7
-        with:
-          script: >
-            const fs = require('fs');
-            const util = require('util');
-            const packageJsonBuffer = await util.promisify(fs.readFile)('package.json');
-            const packageJson = JSON.parse(packageJsonBuffer.toString());
-            return packageJson.devDependencies['@playwright/test'];
-          result-encoding: string
+        run: echo "json=$(yarn info @playwright/test --json)" >> $GITHUB_OUTPUT
 
       - name: Cache playwright binaries
         uses: actions/cache@v4
         id: playwright-cache
         with:
           path: ${{ matrix.playwright-cache-folder }}
-          key: ${{ runner.os }}-playwright-${{ steps.playwright-version.outputs.result }}
+          key: ${{ runner.os }}-playwright-${{ fromJson(steps.playwright-version.outputs.json).children.Version }}
           restore-keys: ${{ runner.os }}-playwright-
 
-      - name: Install npm dependencies
-        run: npm ci --cache .npm --prefer-offline
+      - name: Install dependencies
+        run: yarn --immutable
 
       - name: Install playwright dependencies
-        run: npx playwright install --with-deps
+        run: yarn playwright install --with-deps
         if: steps.playwright-cache.outputs.cache-hit != 'true'
 
       - name: Install playwright dependencies (runtime only)
-        run: npx playwright install-deps
+        run: yarn playwright install-deps
         if: steps.playwright-cache.outputs.cache-hit == 'true'
 
       - name: Run type check
-        run: npm run typecheck
+        run: yarn typecheck
 
       - name: Run lint check
-        run: npm run lint
+        run: yarn lint
 
-      - name: Run npm build
-        run: npm run build
+      - name: Run build
+        run: yarn build
 
       - name: Run playwright tests
-        run: npm run test:e2e
+        run: yarn test:e2e
 
       - name: Upload playwright artifacts
         if: failure()

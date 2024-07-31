@@ -1,6 +1,6 @@
 import type { MantineThemeOverride } from '@mantine/core';
 
-const colors: Required<MantineThemeOverride>['colors'] = {
+const colors = {
     violet: [
         '#f6eeff',
         '#e7daf7',
@@ -13,9 +13,16 @@ const colors: Required<MantineThemeOverride>['colors'] = {
         '#5f2aa0',
         '#52228d'
     ]
-};
+} satisfies MantineThemeOverride['colors'];
+
+const primaryColor = 'violet' satisfies keyof typeof colors;
+
+const primaryShade = {
+    light: 6,
+    dark: 5
+} satisfies MantineThemeOverride['primaryShade'];
 
 const black = '#2e2e2e';
 const white = '#ffffff';
 
-export { black, colors, white };
+export { black, colors, primaryColor, primaryShade, white };

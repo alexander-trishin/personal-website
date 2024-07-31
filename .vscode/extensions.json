@@ -10,6 +10,7 @@
         "PKief.material-icon-theme",
         "ms-playwright.playwright",
         "esbenp.prettier-vscode",
-        "DavidAnson.vscode-markdownlint"
+        "DavidAnson.vscode-markdownlint",
+        "arcanis.vscode-zipfs"
     ]
 }

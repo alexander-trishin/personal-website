@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { LocaleSelect } from '.';
+import { LocaleSelect } from './locale-select';
 
 const meta: Meta<typeof LocaleSelect> = {
     title: 'Locale Select',

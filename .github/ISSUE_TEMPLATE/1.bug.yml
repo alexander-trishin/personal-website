@@ -46,9 +46,9 @@ body:
           OS: 
         Binaries:
           Node:
-          npm:
+          Yarn:
         Browsers:
           Chrome:
           Firefox:
-        npmPackages:
+        Packages:
           ...

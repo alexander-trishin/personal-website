@@ -24,25 +24,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Enable corepack
+        run: corepack enable
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
+          cache: "yarn"
 
-      - name: Cache npm build
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]sx?', '!**.test.[jt]sx?') }}
-          restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-
-      - name: Install npm dependencies
-        run: npm ci --cache .npm --prefer-offline
+      - name: Install dependencies
+        run: yarn --immutable
 
       - name: Build storybook
-        run: npm run storybook:build
+        run: yarn storybook:build
 
       - name: Upload storybook artifacts
         uses: actions/upload-pages-artifact@v3

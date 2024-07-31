@@ -1,13 +1,12 @@
-import { getLocale, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import { NotFoundImage } from '@/assets/svg/images/not-found-image';
-import { ErrorShell, ErrorShellImage, ErrorShellText, ErrorShellTitle } from '@/components/error-shell';
 import { LinkButton } from '@/components/link-button';
+
+import { ErrorShell, ErrorShellImage, ErrorShellText, ErrorShellTitle } from './_components/error-shell';
 
 const NotFoundPage = async () => {
     const locale = await getLocale();
-
-    unstable_setRequestLocale(locale);
 
     const t = await getTranslations({ locale, namespace: 'pages.not-found' });
 

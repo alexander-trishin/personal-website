@@ -3,10 +3,10 @@ import type { AbstractIntlMessages } from 'next-intl';
 
 const cache: Partial<Record<string, AbstractIntlMessages>> = {};
 
-const getTranslations = async (locale: string) => {
-    const translations = (await import(`../../../src/i18n/translations/${locale}.json`)).default;
+const getMessages = async (locale: string) => {
+    const messages = (await import(`../../../src/i18n/locales/${locale}.json`)).default;
 
-    return (cache[locale] ??= translations) as AbstractIntlMessages;
+    return (cache[locale] ??= messages) as AbstractIntlMessages;
 };
 
 const useMessages = (locale: string): AbstractIntlMessages | undefined => {
@@ -18,7 +18,7 @@ const useMessages = (locale: string): AbstractIntlMessages | undefined => {
         const fetchMessages = async () => {
             if (!locale) return;
 
-            const newMessages = await getTranslations(locale);
+            const newMessages = await getMessages(locale);
 
             !canceled && setMessages(newMessages);
         };

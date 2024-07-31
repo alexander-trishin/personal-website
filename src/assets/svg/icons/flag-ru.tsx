@@ -2,7 +2,7 @@
 
 import { rem } from '@mantine/core';
 
-import { IconProps } from './types';
+import type { IconProps } from './types';
 
 const FlagRu = (props: IconProps) => {
     const { size, style, ...rest } = props;
